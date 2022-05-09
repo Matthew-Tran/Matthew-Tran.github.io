@@ -7,7 +7,7 @@ body {
   background-attachment: fixed;
   font-family: 'Trebuchet MS', sans-serif;
 }
-#ad1, #ad2, #ad3, #ad4,  #ad5, #ad6 {
+#ad1, #ad2, #ad3, #ad4,  #ad5, #adv6 {
   height: 172px;
   width: 172px;
   border: 2px solid #9ecaed;
@@ -40,7 +40,7 @@ body {
   left: 1335px;
   top: 480px;
 }
-#ad6{
+#adv6{
   position: absolute;
   left: 1335px;
   top: 280px;
