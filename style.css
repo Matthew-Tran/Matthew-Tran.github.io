@@ -14,6 +14,7 @@ body {
   border-width: 10px;
   box-shadow: 0 0 40px 5px #9ecaed;
   border-radius: 20px;
+  animation: bglow 2s ease-in-out infinite alternate;
 }
 #ad1{
   position: absolute;
@@ -60,9 +61,18 @@ body {
   border-radius: 20px;
   color: white;
   text-align: center;
-
+  animation: bglow 2s ease-in-out infinite alternate;
 }
 
+@-webkit-keyframes bglow {
+  from {
+    border-color: #9ecaed;
+  }
+
+  to {
+    border-color: #3a7dcf;
+  }
+}
 #options .game-options{
   text-align:left;
 
