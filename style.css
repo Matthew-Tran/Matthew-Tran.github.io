@@ -180,10 +180,6 @@ input[type="text"]:focus{
 #dur{
   text-align: center;
 }
-#selection{
-
-}
-
 #expression{
   position: absolute;
   top: 35%;
@@ -197,6 +193,7 @@ input[type="text"]:focus{
   box-shadow: 0 0 40px 5px #32CD32;
   border-radius: 20px;
   text-align:center;
+  animation: bglow2 2s ease-in-out infinite alternate;
 }
 #org{
   position: relative;
@@ -233,10 +230,20 @@ input[type="text"]:focus{
   border: 2px solid #32CD32;
   border-width: 10px;
   box-shadow: 0 0 40px 5px #32CD32;
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
   color: white;
   width: 25%;
   height: 10%;
+  animation: bglow2 2s ease-in-out infinite alternate;
+}
+@-webkit-keyframes bglow2 {
+  from {
+    border-color: #32CD32;
+  }
+
+  to {
+    border-color: #2bb32b;
+  }
 }
 #scoreboard #timer{
   position: absolute;
@@ -261,8 +268,9 @@ input[type="text"]:focus{
   border: 2px solid #32CD32;
   border-width: 10px;
   box-shadow: 0 0 40px 5px #32CD32;
-  border-radius: 20px;
+  border-radius: 0px 0px 20px 20px;
   color: white;
   width: 25%;
   height: 60%;
+  animation: bglow2 2s ease-in-out infinite alternate;
 }
