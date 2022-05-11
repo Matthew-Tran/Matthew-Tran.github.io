@@ -274,6 +274,11 @@ input[type="text"]:focus{
   height: 60%;
   animation: bglow2 2s ease-in-out infinite alternate;
 }
+#endgame .endgamer{
+  position: relative;
+  left: 1%;
+  top: 8%;
+}
 #privacy{
   position: absolute;
   bottom: 0%;
