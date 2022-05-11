@@ -18,33 +18,33 @@ body {
 }
 #ad1{
   position: absolute;
-  top: 80px;
+  top: 11%;
 }
 #ad2{
   position: absolute;
-  top: 280px;
+  top: 38%;
 }
 #ad3{
   position: absolute;
-  top: 480px;
+  top: 65%;
 }
 
 #ad4{
   position: absolute;
-  left: 1335px;
-  top: 80px;
+  left: 87%;
+  top: 11%;
 }
 
 
 #ad5{
   position: absolute;
-  left: 1335px;
-  top: 480px;
+  left: 87%;
+  top: 38%;
 }
 #adv6{
   position: absolute;
-  left: 1335px;
-  top: 280px;
+  left: 87%;
+  top: 65%;
 }
 
 #options{
