@@ -277,11 +277,12 @@ input[type="text"]:focus{
 #privacy{
   position: absolute;
   bottom: 0%;
-  left: 43%;
+  left: 24%;
   border: 2px solid red;
   border-width: 3px;
   border-radius: 5px;
-  width: 14%;
+  width: 50%;
+  height: 3%;
   text-align: center;
   background-color: #262626;
 }
