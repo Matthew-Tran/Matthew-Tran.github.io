@@ -274,3 +274,24 @@ input[type="text"]:focus{
   height: 60%;
   animation: bglow2 2s ease-in-out infinite alternate;
 }
+#privacy{
+  position: absolute;
+  bottom: 0%;
+  left: 43%;
+  border: 2px solid red;
+  border-width: 3px;
+  border-radius: 5px;
+  width: 14%;
+  text-align: center;
+  background-color: #262626;
+}
+#privacy #pri{
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+#privacy #disc{
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
