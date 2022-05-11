@@ -8,8 +8,8 @@ body {
   font-family: 'Trebuchet MS', sans-serif;
 }
 #ad1, #ad2, #ad3, #ad4,  #ad5, #adv6 {
-  height: 172px;
-  width: 172px;
+  height: 23%;
+  width: 11%;
   border: 2px solid #9ecaed;
   border-width: 10px;
   box-shadow: 0 0 40px 5px #9ecaed;
@@ -50,8 +50,8 @@ body {
 #options{
   padding: 15px;
   position: absolute;
-  width: 900px;
-  height: 520px;
+  width: 58%;
+  height: 70%;
   top: 12%;
   left: 19.5%;
   background-color:#262626;
