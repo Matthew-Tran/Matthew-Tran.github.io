@@ -48,6 +48,7 @@ body {
 }
 
 #options{
+
   padding: 15px;
   position: absolute;
   width: 58%;
@@ -299,4 +300,14 @@ input[type="text"]:focus{
   background-color: black;
   color: white;
   border-radius: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 830px) and (max-height: 1350px) {
+  #options{
+    height: 80%;
+  }
 }
