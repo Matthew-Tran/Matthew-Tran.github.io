@@ -401,6 +401,14 @@ input[type="text"]:focus{
     bottom: -240%;
   }
 }
+@media screen and (max-width: 665px ) and (max-height: 440px) {
+  #options{
+    height: 320%;
+  }
+  #privacy{
+    bottom: -300%;
+  }
+}
 @media screen and (max-width: 633px ) and (max-height: 440px) {
   #options{
     height: 320%;
@@ -408,4 +416,23 @@ input[type="text"]:focus{
   #privacy{
     bottom: -300%;
   }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #F03535;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #475BF4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
