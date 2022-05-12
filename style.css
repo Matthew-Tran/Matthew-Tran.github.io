@@ -48,14 +48,11 @@ body {
 }
 
 #options{
-  display: block;
-  overflow: hidden;
-  zoom: 1;
   padding: 15px;
   position: absolute;
   width: 58%;
   min-height: 70%;
-  top: 12%;
+  top: 10%;
   left: 19.5%;
   background-color:#262626;
   border: 2px solid #9ecaed;
@@ -65,7 +62,7 @@ body {
   color: white;
   text-align: center;
   animation: bglow 2s ease-in-out infinite alternate;
-  margin-bottom: 50px;
+  margin-bottom: 1000px;
 }
 
 @-webkit-keyframes bglow {
@@ -188,8 +185,8 @@ input[type="text"]:focus{
   position: absolute;
   top: 35%;
   left: 0%;
-  width: 98.6%;
-  height: 13%;
+  min-width: 98.6%;
+  min-height: 13%;
   color: white;
   background-color: #262626;
   border: 2px solid #32CD32;
@@ -236,8 +233,8 @@ input[type="text"]:focus{
   box-shadow: 0 0 40px 5px #32CD32;
   border-radius: 20px 20px 0px 0px;
   color: white;
-  width: 25%;
-  height: 10%;
+  min-width: 25%;
+  min-height: 10%;
   animation: bglow2 2s ease-in-out infinite alternate;
 }
 @-webkit-keyframes bglow2 {
@@ -274,8 +271,8 @@ input[type="text"]:focus{
   box-shadow: 0 0 40px 5px #32CD32;
   border-radius: 0px 0px 20px 20px;
   color: white;
-  width: 25%;
-  height: 60%;
+  min-width: 25%;
+  min-height: 60%;
   animation: bglow2 2s ease-in-out infinite alternate;
 }
 #endgame .endgamer{
@@ -284,9 +281,9 @@ input[type="text"]:focus{
   top: 8%;
 }
 #privacy{
-  margin-top: 20px;
+
   position: absolute;
-  bottom: 0%;
+  bottom: -19.5%;
   left: 24%;
   border: 2px solid red;
   border-width: 3px;
@@ -294,6 +291,7 @@ input[type="text"]:focus{
   width: 50%;
   text-align: center;
   background-color: #262626;
+
 }
 #privacy #pri{
   background-color: black;
