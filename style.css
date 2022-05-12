@@ -183,22 +183,26 @@ input[type="text"]:focus{
 }
 #expression{
   position: absolute;
-  top: 35%;
+  top: 25%;
   left: 0%;
+  min-width: 100%;
+  min-height: 50%;
+}
+#org{
+  display: flex;
+  position: absolute;
+  top: 40%;
   min-width: 98.6%;
-  min-height: 13%;
+  min-height: 30%;
   color: white;
   background-color: #262626;
   border: 2px solid #32CD32;
   border-width: 10px;
   box-shadow: 0 0 40px 5px #32CD32;
   border-radius: 20px;
-  text-align:center;
+  justify-content: center;
+  align-items: center;
   animation: bglow2 2s ease-in-out infinite alternate;
-}
-#org{
-  position: relative;
-  top: 25%;
 }
 #prob{
   display: inline;
@@ -225,8 +229,11 @@ input[type="text"]:focus{
 }
 #scoreboard{
   position: absolute;
-  top: 22.5%;
+  top: 5%;
   left: 37%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #262626;
   border: 2px solid #32CD32;
   border-width: 10px;
@@ -234,7 +241,7 @@ input[type="text"]:focus{
   border-radius: 20px 20px 0px 0px;
   color: white;
   min-width: 25%;
-  min-height: 10%;
+  min-height: 30%;
   animation: bglow2 2s ease-in-out infinite alternate;
 }
 @-webkit-keyframes bglow2 {
@@ -248,22 +255,20 @@ input[type="text"]:focus{
 }
 #scoreboard #timer{
   position: absolute;
-  top: 9%;
-  left: 5%;
+
+  left: 12%;
 }
 #scoreboard #score{
   position: absolute;
-  top: 9%;
-  left: 75%;
-}
-#scoreboard #score1{
-  position: absolute;
-  top: 9%;
-  left: 40%;
+
+  left: 65%;
 }
 #endgame{
   position: absolute;
-  top: 105%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 75%;
   left: 37%;
   background-color: #262626;
   border: 2px solid #32CD32;
@@ -272,7 +277,7 @@ input[type="text"]:focus{
   border-radius: 0px 0px 20px 20px;
   color: white;
   min-width: 25%;
-  min-height: 60%;
+  min-height: 30%;
   animation: bglow2 2s ease-in-out infinite alternate;
 }
 #endgame .endgamer{
