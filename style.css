@@ -48,11 +48,13 @@ body {
 }
 
 #options{
-  margin-bottom: 1000px;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
   padding: 15px;
   position: absolute;
   width: 58%;
-  height: 70%;
+  min-height: 70%;
   top: 12%;
   left: 19.5%;
   background-color:#262626;
@@ -63,6 +65,7 @@ body {
   color: white;
   text-align: center;
   animation: bglow 2s ease-in-out infinite alternate;
+  margin-bottom: 50px;
 }
 
 @-webkit-keyframes bglow {
@@ -307,116 +310,7 @@ input[type="text"]:focus{
   display: table;
   clear: both;
 }
-@media screen and (max-height: 1045px) {
 
-  #privacy{
-    bottom: -5%;
-  }
-}
-@media screen and (max-height: 765px) {
-  #options{
-    height: 80%;
-  }
-  #privacy{
-    bottom: -20%;
-  }
-}
-@media screen and (max-height: 610px) {
-  #options{
-    height: 100%;
-  }
-  #privacy{
-    bottom: -40%;
-  }
-}
-@media screen and (max-height: 588px) {
-  #options{
-    height: 100%;
-  }
-  #privacy{
-    bottom: -50%;
-  }
-}
-@media screen and (max-height: 480px) {
-  #options{
-    height: 120%;
-  }
-  #privacy{
-    bottom: -70%;
-  }
-}
-@media screen and (max-height: 400px) {
-  #options{
-    height: 140%;
-  }
-  #privacy{
-    bottom: -100%;
-  }
-}
-@media screen and (max-height: 345px) {
-  #options{
-    height: 150%;
-  }
-  #privacy{
-    bottom: -120%;
-  }
-}
-@media screen and (max-width: 1370px ) and (max-height: 818px) {
-  #options{
-    height: 90%;
-  }
-  #privacy{
-    bottom: -30%;
-  }
-}
-@media screen and (max-width: 1165px ) and (max-height: 645px) {
-  #options{
-    height: 120%;
-  }
-  #privacy{
-    bottom: -60%;
-  }
-}
-@media screen and (max-width: 1106px ) and (max-height: 604px) {
-  #options{
-    height: 170%;
-  }
-  #privacy{
-    bottom: -120%;
-  }
-}
-@media screen and (max-width: 1033px ) and (max-height: 569px) {
-  #options{
-    height: 220%;
-  }
-  #privacy{
-    bottom: -180%;
-  }
-}
-@media screen and (max-width: 1001px ) and (max-height: 532px) {
-  #options{
-    height: 270%;
-  }
-  #privacy{
-    bottom: -240%;
-  }
-}
-@media screen and (max-width: 665px ) and (max-height: 440px) {
-  #options{
-    height: 320%;
-  }
-  #privacy{
-    bottom: -300%;
-  }
-}
-@media screen and (max-width: 633px ) and (max-height: 440px) {
-  #options{
-    height: 320%;
-  }
-  #privacy{
-    bottom: -300%;
-  }
-}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -435,4 +329,7 @@ input[type="text"]:focus{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+.game-options{
+  display: block;
 }
