@@ -206,6 +206,7 @@ input[type="text"]:focus{
   justify-content: center;
   align-items: center;
   animation: bglow2 2s ease-in-out infinite alternate;
+  cursor: default;
 }
 #prob{
   display: inline;
@@ -213,7 +214,10 @@ input[type="text"]:focus{
 #answer{
   height: 50px;
   display: inline;
-  border-radius: 5px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  border-width: 2px;
   font-size: 30px;
   width: 150px;
   transition-duration: .5s;
@@ -222,15 +226,16 @@ input[type="text"]:focus{
   display: inline;
 }
 #answer:hover{
-  border: 2px solid blue;
-  box-shadow: 0 0 10px green;
+  border: 5px solid blue;
+  box-shadow: 0 0 10px #000066;
 }
 #answer:focus{
-
+  border-width: 10px;
   box-shadow: 0 0 20px blue;
   outline: none;
 }
 #scoreboard{
+  cursor: default;
   position: absolute;
   top: 5%;
   display: flex;

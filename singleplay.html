@@ -360,7 +360,6 @@
         if (chosen == "addition"){
           if ($("#answer").val() == (parseInt(sessionStorage.getItem("first")) + parseInt(sessionStorage.getItem("second")))){
             score++;
-
             $("#answer").val("");
             chooser();
           }
