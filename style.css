@@ -7,7 +7,7 @@ body {
   background-attachment: fixed;
   font-family: 'Trebuchet MS', sans-serif;
 }
-#ad1, #ad2, #ad3, #ad4,  #ad5, #adv6 {
+#ad1, #ad2, #ad3, #ad4,  #ad5, #adv6, #adv8,#adv9,#adv10,#adv11 {
   height: 60px;
   width: 120px;
   border: 2px solid #9ecaed;
@@ -38,11 +38,18 @@ body {
   position: absolute;
   top: 38%;
 }
+#adv8{
+  position: absolute;
+  top: 24.5%;
+}
 #ad3{
   position: absolute;
   top: 65%;
 }
-
+#adv9{
+  position: absolute;
+  top: 51.5%;
+}
 #ad4{
   position: absolute;
   right: 0.7%;
@@ -60,7 +67,16 @@ body {
   right: 0.7%;
   top: 65%;
 }
-
+#adv10{
+  position: absolute;
+  right: 0.7%;
+  top: 24.5%;
+}
+#adv11{
+  position: absolute;
+  right: 0.7%;
+  top: 51.5%;
+}
 #options{
   display: flex;
   justify-content: center;
