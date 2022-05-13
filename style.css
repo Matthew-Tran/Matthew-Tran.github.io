@@ -306,14 +306,21 @@ input[type="text"]:focus{
   animation: bglow 2s ease-in-out infinite alternate;
 }
 #privacy #pri{
-  background-color: black;
+  background-color: red;
   color: white;
   border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  transition: background .4s;
 }
 #privacy #disc{
-  background-color: black;
+  background-color: red;
   color: white;
   border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  transition: background .4s;
+}
+#privacy #disc:hover, #privacy #pri:hover{
+  background: #4d0000;
 }
 .row:after {
   content: "";
