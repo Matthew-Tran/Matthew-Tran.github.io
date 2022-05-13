@@ -319,7 +319,7 @@ input[type="text"]:focus{
   min-width: 25%;
   min-height: 30%;
   animation: bglow2 2s ease-in-out infinite alternate;
-  z-index: -1;
+  z-index: 0;
 }
 #endgame .endgamer{
   position: relative;
