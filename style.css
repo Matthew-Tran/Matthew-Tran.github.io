@@ -7,9 +7,9 @@ body {
   background-attachment: fixed;
   font-family: 'Trebuchet MS', sans-serif;
 }
-#ad1, #ad2, #ad3, #ad4,  #ad5, #adv6, #adv8,#adv9,#adv10,#adv11 {
-  height: 60px;
-  width: 120px;
+#ad1,   #ad4  {
+  height: 600px;
+  width: 160px;
   border: 2px solid #9ecaed;
   border-width: 10px;
   box-shadow: 0 0 40px 5px #9ecaed;
