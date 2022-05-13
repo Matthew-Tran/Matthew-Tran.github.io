@@ -15,6 +15,7 @@ body {
   box-shadow: 0 0 40px 5px #9ecaed;
   border-radius: 20px;
   animation: bglow 2s ease-in-out infinite alternate;
+  background-color:#262626;
 }
 #ad1{
   position: absolute;
@@ -296,13 +297,13 @@ input[type="text"]:focus{
   position: absolute;
   bottom: -19.5%;
   left: 24%;
-  border: 2px solid red;
+  border: 2px solid #9ecaed;
   border-width: 3px;
   border-radius: 5px;
   width: 50%;
   text-align: center;
   background-color: #262626;
-
+  animation: bglow 2s ease-in-out infinite alternate;
 }
 #privacy #pri{
   background-color: black;
