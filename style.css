@@ -183,7 +183,7 @@ input[type="text"]:focus{
 }
 #expression{
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 0%;
   min-width: 100%;
   min-height: 50%;
