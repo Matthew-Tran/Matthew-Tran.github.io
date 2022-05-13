@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <title>FastMafs</title>
+  </head>
+  <body>
+    <span id="ad1"></span>
+    <span id="ad2"></span>
+    <span id="ad3"></span>
+    <div id="options">
+      <a href="index.html"><img src="logo.png" width=400 height=50></a>
+      <p style="cursor: default;">A game where you can practice your arithmetic/number sense skills in decimals, fractions, integers, and more. Don't use commas, so just type out the numbers. Solve as many as you can within a time limit. If there are any issues or suggestions that you would like to point out, then contact us at <a href = "mailto: mmt@fastmafs.com" style="color: white; ">mmt@fastmafs.com</a>.</p>
+      <form  class='game-options'>
+        <dl class="option1">
+          <div id="jupiter">
+          <dt>
+            <label>
+              <input checked name='arith' type='checkbox' id="add">
+              Addition
+            </label>
+          </dt>
+          <dd>Range: (<input type="text" name="add_left_min" id="add_left_min" value="2" size="5"> to <input type="text" name="add_left_max" id="add_left_max" value="100" size="5">) +
+	  (<input type="text" name="add_right_min" id="add_right_min" value="2" size="5"> to <input type="text" name="add_right_max" id="add_right_max" value="100" size="5">)</dd>
+          <dt>
+            <label>
+              <input checked name='arith' type='checkbox' id="sub">
+              Subtraction - Opposite of Addition.
+            </label>
+          </dt>
+          <dt>
+            <label>
+               <input checked name='arith' type='checkbox' id="mul">
+              Multiplication
+            </label>
+          </dt>
+          <dd>Range: (<input type="text" name="mul_left_min" id="mul_left_min" value="2" size="5"> to <input type="text" name="mul_left_max" id="mul_left_max" value="12" size="5">) ×
+	  (<input type="text" name="mul_right_min" id="mul_right_min" value="2" size="5"> to <input type="text" name="mul_right_max" id="mul_right_max" value="100" size="5">)</dd>
+          <dt>
+            <label>
+              <input checked name='arith' type='checkbox' id="div">
+              Division - Opposite of Multiplication.
+            </label>
+          </dt>
+          <dd>Range: (<input type="text" name="div_left_min" id="div_left_min" value="2" size="5"> to <input type="text" name="div_left_max" id="div_left_max" value="12" size="5">) ÷
+	  (<input type="text" name="div_right_min" id="div_right_min" value="2" size="5"> to <input type="text" name="div_right_max" id="div_right_max" value="999" size="5">)</dd>
+        <!--  <dt>
+            <label>
+              <input name='fractions' type='checkbox'>
+                Fractions Arithmetic - Bonus points if you answer in simplified form.
+              </label>
+          </dt> -->
+          <dt>
+            <label>
+              <input name='arith' type='checkbox' id="squares">
+                Squares - Multiplying a number by itself.
+            </label>
+          </dt>
+          <dd>Range: (<input type="text" name="squares_left_min" id="squares_left_min" value="2" size="5"> to <input type="text" name="squares_left_max" id="squares_left_max" value="50" size="5">)</dd>
+          <dt>
+            <label>
+              <input name='arith' type='checkbox' id="cubes">
+              Cubes - Multiplying the number by its square.
+            </label>
+          </dt>
+          <dd>Range: (<input type="text" name="cubes_left_min" id="cubes_left_min" value="2" size="5"> to <input type="text" name="cubes_left_max" id="cubes_left_max" value="50" size="5">)</dd>
+          <dt>
+            <label>
+              <input name='arith' type='checkbox' id="factorials">
+                Factorials - n! = n × (n-1) × (n-2) × ··· × 2 × 1
+              </label>
+          </dt>
+          <dd>Range: (<input type="text" name="fact_left_min" id="fact_left_min" value="2" size="5"> to <input type="text" name="fact_left_max" id="fact_left_max" value="15" size="5">)</dd>
+          <dt>
+            <label>
+              <input name='arith' type='checkbox' id="fives">
+              Multiplying Numbers Ending in 5 - Multiplication but only for numbers ending in 5.
+            </label>
+          </dt>
+          <dd>Range: (<input type="text" name="fives_left_min" id="fives_left_min" value="5" size="5"> to <input type="text" name="fives_left_max" id="fives_left_max" value="105" size="5">) ×
+	  (<input type="text" name="fives_right_min" id="fives_right_min" value="5" size="5"> to <input type="text" name="fives_right_max" id="fives_right_max" value="105" size="5">)</dd>
+            <!-- <dt>
+              <label>
+                <input name='distance' type='checkbox' id="coor">
+                  Distance Squared - Find the squared distance between two coordinate points.
+                </label>
+            </dt>
+            <dd>Range: (<input type="text" name="coor_left_min" id="coor_left_min" value="-100" size="5"> to <input type="text" name="coor_left_max" id="coor_left_max" value="100" size="5">),
+  	  (<input type="text" name="coor_right_min" id="coor_right_min" value="-100" size="5"> to <input type="text" name="coor_right_max" id="coor_right_max" value="100" size="5">)</dd>
+             <dt>
+              <label>
+                <input name='repeating' type='checkbox'>
+                  Repeating Decimals - Convert decimals to its simplified fraction form.
+                </label>
+            </dt>-->
+            <dt>
+              <label>
+                <input name='arith' type='checkbox' id="base">
+                  Base Conversion - Convert between bases.
+                </label>
+            </dt>
+            <dd>Range: (<input type="text" name="basenum_left_min" id="basenum_left_min" value="2" size="5"> to <input type="text" name="basenum_left_max" id="basenum_left_max" value="100" size="5">)</dd>
+            <dd>Base Range: (<input type="text" name="base_left_min" id="base_left_min" value="2" size="5" min="2" max="36"> to <input type="text" name="base_left_max" id="base_left_max" value="36" size="5" min="2" max="36">) to (<input type="text" name="base_right_min" id="base_right_min" value="2" size="5" min="2" max="36"> to <input type="text" name="base_right_max" id="base_right_max" value="36" size="5" min="2" max="36">)</dd>
+            <dt>
+              <label>
+                <input name='arith' type='checkbox' id="comb">
+                  Combinations/Permutations
+                </label>
+            </dt>
+            <dd>Range: (<input type="text" name="comb_left_min" id="comb_left_min" value="2" size="5"> to <input type="text" name="comb_left_max" id="comb_left_max" value="10" size="5">)</dd>
+            <dt>
+              <label>
+                <input name='arith' type='checkbox' id="temp">
+                  Temperature Conversions - From absolute zero to boiling point. Use decimals for °C to °F, and use fractions for °F to °C.
+                </label>
+            </dt>
+            <!-- <dt>
+              <label>
+                <input name='figurate' type='checkbox'>
+                  Figurate Numbers - Triangular Numbers, Pentagonal Numbers, Hexagonal Numbers, and more.
+                </label>
+            </dt>
+            <dt>
+              <label>
+                <input name='arith' type='checkbox'>
+                  Trigonometric Values - e.g. cos(60°) or cos(π/3).
+                </label>
+            </dt>-->
+            <dt>
+              <label>
+                <input name='arith' type='checkbox' id="gcd">
+                  Greatest Common Divisor/Least Common Multiple
+                </label>
+            </dt>
+            <dd>Range: (<input type="text" name="gcd_left_min" id="gcd_left_min" value="2" size="5"> to <input type="text" name="gcd_left_max" id="gcd_left_max" value="100" size="5">)</dd>
+            <!--<dt>
+              <label>
+                <input name='sqrt' type='checkbox'>
+                  Square Root - The more precise your answer is, the more points you get.
+                </label>
+            </dt>-->
+            <dt>
+              <label>
+                <input name='arith' type='checkbox' id="cal">
+                  Calendar Dates (Gregorian) - Answer with the correct day of the week. Type out the day, e.g., "Wednesday".
+                </label>
+            </dt>
+
+          </div>
+        </dl>
+
+        <div id="dur" class="row">
+          Duration:
+          <select name='duration' id="selection" style="font-family: 'Trebuchet MS', sans-serif;">
+            <option value='30'>30 seconds</option>
+            <option value='60'>60 seconds</option>
+            <option selected value='120'>120 seconds</option>
+            <option value='300'>300 seconds</option>
+            <option value='600'>600 seconds</option>
+          </select>
+        </div>
+        </p>
+        <div class="submitholder" class="row">
+          <button class="submitter" formaction="singleplay.html">START</button>
+        <!--  <button class="submitter1" formaction="invite">INVITE</button>-->
+
+          <button class="submitter3">SELECT ALL</button>
+          <button class="zen" formaction="zen.html">ZEN</button>
+        </div>
+      </form>
+      <span id="privacy">
+        <a href="https://app.termly.io/document/privacy-policy/dd44608b-a589-44ae-8c7d-af7c12f072b3" target="_blank"><button id="pri">Privacy Policy</button></a>
+        <a href="https://app.termly.io/document/disclaimer/075a33c5-5ea2-4d02-927f-98d2673cf0ac" target="_blank"><button id="disc">Disclaimer</button></a>
+      </span>
+    </div>
+    <span id="ad4"></span>
+    <span id="ad5"></span>
+    <span id="adv6"></span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--  <script src="game.js" type="text/javascript"></script> -->
+    <script>
+    $(document).ready(function(){
+      var selectedall = false;
+      $(".submitter3").click(function(){
+        event.preventDefault();
+        const coll = document.getElementsByName("arith");
+        if ( selectedall == false){
+          for (let i = 0; i < coll.length; i++) {
+            if (coll[i].type == "checkbox") {
+              coll[i].checked = true;
+            }
+          }
+          selectedall = true;
+        }
+        else {
+          for (let i = 0; i < coll.length; i++) {
+            if (coll[i].type == "checkbox") {
+              coll[i].checked = false;
+            }
+          }
+          selectedall = false;
+        }
+      });
+      $(".submitter").click(function(){
+        sessionStorage.setItem("time", $("#selection").val());
+
+        sessionStorage.setItem("addli", $("#add_left_min").val());
+        sessionStorage.setItem("addla", $("#add_left_max").val());
+        sessionStorage.setItem("addri", $("#add_right_min").val());
+        sessionStorage.setItem("addra", $("#add_right_max").val());
+        sessionStorage.setItem("subli", $("#add_left_min").val());
+        sessionStorage.setItem("subla", $("#add_left_max").val());
+        sessionStorage.setItem("subri", $("#add_right_min").val());
+        sessionStorage.setItem("subra", $("#add_right_max").val());
+
+        sessionStorage.setItem("mulli", $("#mul_left_min").val());
+        sessionStorage.setItem("mulla", $("#mul_left_max").val());
+        sessionStorage.setItem("mulri", $("#mul_right_min").val());
+        sessionStorage.setItem("mulra", $("#mul_right_max").val());
+
+        sessionStorage.setItem("divli", $("#div_left_min").val());
+        sessionStorage.setItem("divla", $("#div_left_max").val());
+        sessionStorage.setItem("divri", $("#div_right_min").val());
+        sessionStorage.setItem("divra", $("#div_right_max").val());
+
+        sessionStorage.setItem("sqrli", $("#squares_left_min").val());
+        sessionStorage.setItem("sqrla", $("#squares_left_max").val());
+
+        sessionStorage.setItem("cubei", $("#cubes_left_min").val());
+        sessionStorage.setItem("cubea", $("#cubes_left_max").val());
+
+        sessionStorage.setItem("facti", $("#fact_left_min").val());
+        sessionStorage.setItem("facta", $("#fact_left_max").val());
+
+        sessionStorage.setItem("fli", $("#fives_left_min").val());
+        sessionStorage.setItem("fla", $("#fives_left_max").val());
+        sessionStorage.setItem("fri", $("#fives_right_min").val());
+        sessionStorage.setItem("fra", $("#fives_right_max").val());
+
+        sessionStorage.setItem("cli", $("#coor_left_min").val());
+        sessionStorage.setItem("cla", $("#coor_left_max").val());
+        sessionStorage.setItem("cri", $("#coor_right_min").val());
+        sessionStorage.setItem("cra", $("#coor_right_max").val());
+
+        sessionStorage.setItem("baseli", $("#base_left_min").val());
+        sessionStorage.setItem("basela", $("#base_left_max").val());
+        sessionStorage.setItem("baseri", $("#base_right_min").val());
+        sessionStorage.setItem("basera", $("#base_right_max").val());
+        sessionStorage.setItem("basenli", $("#basenum_left_min").val());
+        sessionStorage.setItem("basenla", $("#basenum_left_max").val());
+
+        sessionStorage.setItem("combi", $("#comb_left_min").val());
+        sessionStorage.setItem("comba", $("#comb_left_max").val());
+
+        sessionStorage.setItem("gcdi", $("#gcd_left_min").val());
+        sessionStorage.setItem("gcda", $("#gcd_left_max").val());
+        sessionStorage.setItem("selected", "false");
+        if ($("#sub").is(":checked")){
+          sessionStorage.setItem("sub", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("sub", "false");
+        }
+        if ($("#add").is(":checked")){
+          sessionStorage.setItem("add", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("add", "false");
+        }
+        if ($("#mul").is(":checked")){
+          sessionStorage.setItem("mul", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("mul", "false");
+        }
+        if ($("#div").is(":checked")){
+          sessionStorage.setItem("div", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("div", "false");
+        }
+        if ($("#squares").is(":checked")){
+          sessionStorage.setItem("squares", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("squares", "false");
+        }
+        if ($("#cubes").is(":checked")){
+          sessionStorage.setItem("cubes", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("cubes", "false");
+        }
+        if ($("#fives").is(":checked")){
+          sessionStorage.setItem("fives", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("fives", "false");
+        }
+        if ($("#factorials").is(":checked")){
+          sessionStorage.setItem("facts", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("facts", "false");
+        }
+        if ($("#coor").is(":checked")){
+          sessionStorage.setItem("coor", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("coor", "false");
+        }
+        if ($("#base").is(":checked")){
+          sessionStorage.setItem("base", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("base", "false");
+        }
+        if ($("#cal").is(":checked")){
+          sessionStorage.setItem("cal", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("cal", "false");
+        }
+        if ($("#comb").is(":checked")){
+          sessionStorage.setItem("comb", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("comb", "false");
+        }
+        if ($("#temp").is(":checked")){
+          sessionStorage.setItem("temp", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("temp", "false");
+        }
+        if ($("#gcd").is(":checked")){
+          sessionStorage.setItem("gcd", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("gcd", "false");
+        }
+        if (sessionStorage.getItem("selected") == "false"){
+          event.preventDefault();
+          alert("You didn't select anything.");
+        }
+      });
+      $(".zen").click(function(){
+        sessionStorage.setItem("time", $("#selection").val());
+
+        sessionStorage.setItem("addli", $("#add_left_min").val());
+        sessionStorage.setItem("addla", $("#add_left_max").val());
+        sessionStorage.setItem("addri", $("#add_right_min").val());
+        sessionStorage.setItem("addra", $("#add_right_max").val());
+        sessionStorage.setItem("subli", $("#add_left_min").val());
+        sessionStorage.setItem("subla", $("#add_left_max").val());
+        sessionStorage.setItem("subri", $("#add_right_min").val());
+        sessionStorage.setItem("subra", $("#add_right_max").val());
+
+        sessionStorage.setItem("mulli", $("#mul_left_min").val());
+        sessionStorage.setItem("mulla", $("#mul_left_max").val());
+        sessionStorage.setItem("mulri", $("#mul_right_min").val());
+        sessionStorage.setItem("mulra", $("#mul_right_max").val());
+
+        sessionStorage.setItem("divli", $("#div_left_min").val());
+        sessionStorage.setItem("divla", $("#div_left_max").val());
+        sessionStorage.setItem("divri", $("#div_right_min").val());
+        sessionStorage.setItem("divra", $("#div_right_max").val());
+
+        sessionStorage.setItem("sqrli", $("#squares_left_min").val());
+        sessionStorage.setItem("sqrla", $("#squares_left_max").val());
+
+        sessionStorage.setItem("cubei", $("#cubes_left_min").val());
+        sessionStorage.setItem("cubea", $("#cubes_left_max").val());
+
+        sessionStorage.setItem("facti", $("#fact_left_min").val());
+        sessionStorage.setItem("facta", $("#fact_left_max").val());
+
+        sessionStorage.setItem("fli", $("#fives_left_min").val());
+        sessionStorage.setItem("fla", $("#fives_left_max").val());
+        sessionStorage.setItem("fri", $("#fives_right_min").val());
+        sessionStorage.setItem("fra", $("#fives_right_max").val());
+
+        sessionStorage.setItem("cli", $("#coor_left_min").val());
+        sessionStorage.setItem("cla", $("#coor_left_max").val());
+        sessionStorage.setItem("cri", $("#coor_right_min").val());
+        sessionStorage.setItem("cra", $("#coor_right_max").val());
+
+        sessionStorage.setItem("baseli", $("#base_left_min").val());
+        sessionStorage.setItem("basela", $("#base_left_max").val());
+        sessionStorage.setItem("baseri", $("#base_right_min").val());
+        sessionStorage.setItem("basera", $("#base_right_max").val());
+        sessionStorage.setItem("basenli", $("#basenum_left_min").val());
+        sessionStorage.setItem("basenla", $("#basenum_left_max").val());
+
+        sessionStorage.setItem("combi", $("#comb_left_min").val());
+        sessionStorage.setItem("comba", $("#comb_left_max").val());
+
+        sessionStorage.setItem("gcdi", $("#gcd_left_min").val());
+        sessionStorage.setItem("gcda", $("#gcd_left_max").val());
+        sessionStorage.setItem("selected", "false");
+        if ($("#sub").is(":checked")){
+          sessionStorage.setItem("sub", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("sub", "false");
+        }
+        if ($("#add").is(":checked")){
+          sessionStorage.setItem("add", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("add", "false");
+        }
+        if ($("#mul").is(":checked")){
+          sessionStorage.setItem("mul", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("mul", "false");
+        }
+        if ($("#div").is(":checked")){
+          sessionStorage.setItem("div", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("div", "false");
+        }
+        if ($("#squares").is(":checked")){
+          sessionStorage.setItem("squares", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("squares", "false");
+        }
+        if ($("#cubes").is(":checked")){
+          sessionStorage.setItem("cubes", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("cubes", "false");
+        }
+        if ($("#fives").is(":checked")){
+          sessionStorage.setItem("fives", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("fives", "false");
+        }
+        if ($("#factorials").is(":checked")){
+          sessionStorage.setItem("facts", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("facts", "false");
+        }
+        if ($("#coor").is(":checked")){
+          sessionStorage.setItem("coor", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("coor", "false");
+        }
+        if ($("#base").is(":checked")){
+          sessionStorage.setItem("base", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("base", "false");
+        }
+        if ($("#cal").is(":checked")){
+          sessionStorage.setItem("cal", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("cal", "false");
+        }
+        if ($("#comb").is(":checked")){
+          sessionStorage.setItem("comb", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("comb", "false");
+        }
+        if ($("#temp").is(":checked")){
+          sessionStorage.setItem("temp", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("temp", "false");
+        }
+        if ($("#gcd").is(":checked")){
+          sessionStorage.setItem("gcd", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("gcd", "false");
+        }
+        if (sessionStorage.getItem("selected") == "false"){
+          event.preventDefault();
+          alert("You didn't select anything.");
+        }
+      });
+    });
+    </script>
+  </body>
+</html>
