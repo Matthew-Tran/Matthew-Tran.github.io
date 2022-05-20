@@ -1,18 +1,19 @@
 
 body {
-  background-color: black;
-   background-image: url("milky-way-starry-sky-night-sky-star-957061.jpeg");
+  background-color: #111111;
+  /* background-image: url("milky-way-starry-sky-night-sky-star-957061.jpeg"); */
   background-position: center center;
   background-size: 100% 100%;
   background-attachment: fixed;
   font-family: 'Trebuchet MS', sans-serif;
+  overflow-x: hidden;
 }
 #ad1,   #ad4  {
   height: 600px;
   width: 160px;
   border: 2px solid #9ecaed;
   border-width: 10px;
-  box-shadow: 0 0 40px 5px #9ecaed;
+
   border-radius: 20px;
   animation: bglow 2s ease-in-out infinite alternate;
   background-color:#262626;
@@ -20,7 +21,7 @@ body {
 #adv7{
   border: 2px solid #9ecaed;
   border-width: 10px;
-  box-shadow: 0 0 40px 5px #9ecaed;
+
   border-radius: 20px;
   animation: bglow 2s ease-in-out infinite alternate;
   background-color:#262626;
@@ -33,6 +34,7 @@ body {
 #ad1{
   position: absolute;
   top: 11%;
+  left: 0%;
 }
 #ad2{
   position: absolute;
@@ -52,7 +54,7 @@ body {
 }
 #ad4{
   position: absolute;
-  right: 0.7%;
+  right: 0%;
   top: 11%;
 }
 
@@ -89,7 +91,7 @@ body {
   background-color:#262626;
   border: 2px solid #9ecaed;
   border-width: 10px;
-  box-shadow: 0 0 40px 5px #9ecaed;
+
   border-radius: 20px;
   color: white;
   text-align: center;
@@ -123,19 +125,19 @@ input[type="text"]{
   transition-duration: .5s;
 }
 input[type="text"]:hover{
-  border: 2px solid red;
-  box-shadow: 0 0 10px red;
+  border: 2px solid blue;
+  box-shadow: 0 0 10px blue;
 }
 input[type="text"]:focus{
 
-  box-shadow: 0 0 20px red;
+  box-shadow: 0 0 20px blue;
   outline: none;
 }
 .submitter {
   color: white;
   border-radius: 20px;
-  width: 150px;
-  height:50px;
+  min-width: 150px;
+  min-height:50px;
   font-family: 'Orbitron', sans-serif;
   background: #0000ff;
   transition: background .4s;
@@ -146,8 +148,8 @@ input[type="text"]:focus{
 .submitter1 {
   color: white;
   border-radius: 20px;
-  width: 150px;
-  height:50px;
+  min-width: 150px;
+  min-height:50px;
   font-family: 'Orbitron', sans-serif;
   background: green;
   transition: background .4s;
@@ -158,8 +160,8 @@ input[type="text"]:focus{
 .submitter2 {
   color: white;
   border-radius: 20px;
-  width: 150px;
-  height:50px;
+  min-width: 150px;
+  min-height:50px;
   font-family: 'Orbitron', sans-serif;
   background: red;
   transition: background .4s;
@@ -170,8 +172,8 @@ input[type="text"]:focus{
 .submitter3 {
   color: white;
   border-radius: 20px;
-  width: 150px;
-  height:50px;
+  min-width: 150px;
+  min-height:50px;
   font-family: 'Orbitron', sans-serif;
   background: purple;
   transition: background .4s;
@@ -182,8 +184,8 @@ input[type="text"]:focus{
 .zen {
   color: white;
   border-radius: 20px;
-  width: 150px;
-  height:50px;
+  min-width: 150px;
+  min-height:50px;
   font-family: 'Orbitron', sans-serif;
   background: black;
   transition: background .4s;
@@ -198,8 +200,8 @@ input[type="text"]:focus{
   left: 115px;
   color: white;
   border-radius: 20px;
-  width: 150px;
-  height:50px;
+  min-width: 150px;
+  min-height:50px;
   font-family: 'Orbitron', sans-serif;
   background: #FF6600;
   transition: background .4s;
@@ -233,7 +235,7 @@ input[type="text"]:focus{
   background-color: #262626;
   border: 2px solid #32CD32;
   border-width: 10px;
-  box-shadow: 0 0 40px 5px #32CD32;
+
   border-radius: 20px;
   justify-content: center;
   align-items: center;
@@ -260,11 +262,11 @@ input[type="text"]:focus{
 }
 #answer:hover{
   border: 5px solid blue;
-  box-shadow: 0 0 10px #000066;
+
 }
 #answer:focus{
   border-width: 10px;
-  box-shadow: 0 0 20px blue;
+
   outline: none;
 }
 #scoreboard{
@@ -277,7 +279,7 @@ input[type="text"]:focus{
   background-color: #262626;
   border: 2px solid #32CD32;
   border-width: 10px;
-  box-shadow: 0 0 40px 5px #32CD32;
+
   border-radius: 20px 20px 0px 0px;
   color: white;
   min-width: 25%;
@@ -313,7 +315,7 @@ input[type="text"]:focus{
   background-color: #262626;
   border: 2px solid #32CD32;
   border-width: 10px;
-  box-shadow: 0 0 40px 5px #32CD32;
+
   border-radius: 0px 0px 20px 20px;
   color: white;
   min-width: 25%;
@@ -430,4 +432,68 @@ input[type="text"]:focus{
   top: 63%;
   left: 0%;
   height: 250px;
+}
+#topnav {
+  overflow: hidden;
+  background-color: #002439;
+  position: absolute;
+  right: -2%;
+  min-width: 60%;
+  min-height: 7.4%;
+  top: 0%;
+  bottom: 92.5%;
+  border: 2px solid black;
+  border-width: 2px;
+  box-shadow: 0 0 2px 1px blue;
+  border-radius: 0px;
+  z-index: 1;
+  margin-bottom: 0px;
+}
+#topnav a {
+  font-family: 'Orbitron', sans-serif;
+  float: left;
+  color: #f2f2f2;
+  padding: .2% 2%;
+  text-decoration: none;
+  font-size: 17px;
+  border-right: 5px solid #000099;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#topnav a:hover {
+  background-color: #4e7988;
+  color: black;
+}
+
+#topnav a.active {
+  background-color: #005066;
+  color: #78cce2;
+}
+#mta{
+  background-color: #222222;
+  position: absolute;
+  top: 8.1%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  min-height: 122%;
+  min-width: 102%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#choices{
+  display:  block;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  min-height: 97%;
+  position: absolute;
+  width: 50%;
+  color: white;
+  padding: 1%;
+  text-align: center;
 }

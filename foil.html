@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <title>FOILing Basics</title>
+  </head>
+  <body>
+    <div id="mtd">
+      <div>
+        <span id="topnav">
+          <a href="hindex.html">Home</a>
+          <a href="mem.html">Memory Games</a>
+          <a href="lb.html">Leaderboards</a>
+          <a class="active" href="mt.html">Math Tricks</a>
+        </span>
+      </div>
+      <div id="mta">
+        <span id="choices">
+          <h1>FOILing Basics</h1>
+          <p>Here, we will cover the most basic FOILing case - 2-digit by 2-digit multiplication.</p>
+          <p>We have two 2-digit numbers to multiply - ab and cd where ab = (10×a+b) and cd = (10×c+d).</p>
+          <p>Then, ab × cd = (10×a+b) × (10×c+d) = 100×(a×c) + 10×(b×c+a×d) + 1×(b×d). </p>
+          <p>(b×d) represents the units digit, (b×c+a×d) represents the tens digit, and (a×c) represents the hundreds digit. If any of these values are greater than or equal to 10, then you carry over to the next higher tens.</p>
+          <p>Example: 43×89</p>
+          <p>Units = 3×9 = <i>2</i>7</p>
+          <p>Tens = 3×8 + 9×4 + <i>2</i> = <i>6</i>2</p>
+          <p>Hundreds = 4×8 + <i>6</i> = 38</p>
+          <p> = 3827</p>
+          <a href="game.html?add_left_min=2&add_left_max=100&add_right_min=2&add_right_max=100&arith=on&mul_left_min=10&mul_left_max=99&mul_right_min=10&mul_right_max=99&div_left_min=2&div_left_max=12&div_right_min=2&div_right_max=999&squares_left_min=2&squares_left_max=50&cubes_left_min=2&cubes_left_max=50&fact_left_min=2&fact_left_max=15&fives_left_min=5&fives_left_max=105&fives_right_min=5&fives_right_max=105&basenum_left_min=2&basenum_left_max=100&base_left_min=2&base_left_max=36&base_right_min=2&base_right_max=36&comb_left_min=2&comb_left_max=10&gcd_left_min=2&gcd_left_max=100&duration=120"><button class="submitter">Practice</button></a>
+        </span>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    </script>
+  </body>
+</html>
