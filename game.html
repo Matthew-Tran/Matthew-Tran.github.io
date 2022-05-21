@@ -54,14 +54,14 @@
         $("#timer").text("Time: 0");
         $("#expression").hide();
         $("#result").show();
-        $("#result").html("<h2 id='scoreres'>Score: " + score + "</h2> <a href='javascript:window.location.href=window.location.href'><button class='submitter'>Play Again?</button></a>  <a href='index.html'><button class='submitter1'>Home</button></a>");
+        $("#result").html("<div id='scc'><h2 id='scoreres'>Score: " + score + "</h2> <a href='javascript:window.location.href=window.location.href'><button class='submitter'>Play Again?</button></a>  <a href='index.html'><button class='submitter1'>Home</button></a></div>");
         $("#adrow1").show();
         $("#adrow2").show();
       } else {
         $("#timer").text("Time: " + timeleft);
       }
       timeleft -= 1;
-    }, 1000);
+    }, 1);
       $("#completed").hide();
       var score = 0;
       var options1 = [];
