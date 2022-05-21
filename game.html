@@ -43,9 +43,7 @@
     if ( window.history.replaceState ) {
       window.history.replaceState( null, null, window.location.href );
     }
-    $("#adrow1").hide();
-    $("#adrow2").hide();
-    $("#result").hide();
+    $("#resultc").hide();
     $("#timer").text("Time: " + String(sessionStorage.getItem("time")));
     var timeleft = parseInt(sessionStorage.getItem("time")) - 1;
     var downloadTimer = setInterval(function(){
@@ -53,10 +51,8 @@
         clearInterval(downloadTimer);
         $("#timer").text("Time: 0");
         $("#expression").hide();
-        $("#result").show();
         $("#result").html("<div id='scc'><h2 id='scoreres'>Score: " + score + "</h2> <a href='javascript:window.location.href=window.location.href'><button class='submitter'>Play Again?</button></a>  <a href='index.html'><button class='submitter1'>Home</button></a></div>");
-        $("#adrow1").show();
-        $("#adrow2").show();
+        $("#resultc").show();
       } else {
         $("#timer").text("Time: " + timeleft);
       }
