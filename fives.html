@@ -26,11 +26,40 @@
           <p>Sometimes, using this trick can be much faster than using the FOILing method in multiplying numbers.</p>
           <p>Let a5 and b5 be two two-digit numbers such that a5 = a×10+5 and b5 = b×10+5.</p>
           <p>Then a5×b5 = (a×10+5)×(b×10+5) = 100(a×b) + 50×(a+b) + 25</p>
+          <p>= 100(a×b+(a+b)÷2) + 25</p>
+          <p>We have two cases for the last two digits of the answer.</p>
+          <p>If (a+b) % 2 = 0, then the last two digits are 25.</p>
+          <p>If (a+b) % 2 = 1, then the last two digits are 75.</p>
+          <p>Then the rest of the answer is a×b+⌊(a+b)÷2⌋ where the floor of a number is the greatest integer that is less than or equal to the number.</p>
+          <a href="game.html"><button class="submitter">Practice</button></a>
         </span>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+      $(document).ready(function(){
+        $(".submitter").click(function(){
+          sessionStorage.setItem("time", "30");
+          sessionStorage.setItem("fli", "5");
+          sessionStorage.setItem("fla", "100");
+          sessionStorage.setItem("fri", "5");
+          sessionStorage.setItem("fra", "100");
+          sessionStorage.setItem("mul", "false");
+          sessionStorage.setItem("sub", "false");
+          sessionStorage.setItem("add", "false");
+          sessionStorage.setItem("div", "false");
+          sessionStorage.setItem("squares", "false");
+          sessionStorage.setItem("cubes", "false");
+          sessionStorage.setItem("fives", "true");
+          sessionStorage.setItem("facts", "false");
+          sessionStorage.setItem("coor", "false");
+          sessionStorage.setItem("base", "false");
+          sessionStorage.setItem("cal", "false");
+          sessionStorage.setItem("comb", "false");
+          sessionStorage.setItem("temp", "false");
+          sessionStorage.setItem("gcd", "false");
+        });
+      });
     </script>
   </body>
 </html>
