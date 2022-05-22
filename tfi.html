@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4052858639133443"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <title>Multiplying by 25</title>
+  </head>
+  <body>
+    <div id="mtd">
+      <div>
+        <span id="topnav">
+          <a href="index.html">Home</a>
+          <a href="mem.html">Memory Games</a>
+          <a href="lb.html">Leaderboards</a>
+          <a class="active" href="mt.html">Math Tricks</a>
+        </span>
+      </div>
+      <div id="mta">
+        <span id="choices">
+          <h1>Multiplying by 25</h1>
+          <p>25 = 100 ÷ 4</p>
+          <p>Then, if we want to multiply a number by 25, we can divide that number by 4 then multiply it by 100.</p>
+          <p>Example: 12 × 25</p>
+          <p>12 × 25 = 12 × (100 ÷ 4) = (12 ÷ 4) × 100 = 3 × 100 = 300</p>
+          <p>12 × 25 = 300</p>
+          <p>Example: 25 × 61</p>
+          <p>25 × 61 = (100 ÷ 4) × 61 = 100 × (61 ÷ 4) = 100 × 15.25 = 1525</p>
+          <p>25 × 61 = 1525</p>
+          <a href="game.html"><button class="submitter">Practice</button></a>
+        </span>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".submitter").click(function(){
+          sessionStorage.setItem("time", "30");
+          sessionStorage.setItem("mulri", "25");
+          sessionStorage.setItem("mulra", "25");
+          sessionStorage.setItem("mulli", "2");
+          sessionStorage.setItem("mulla", "100");
+          sessionStorage.setItem("mul", "true");
+          sessionStorage.setItem("sub", "false");
+          sessionStorage.setItem("add", "false");
+          sessionStorage.setItem("div", "false");
+          sessionStorage.setItem("squares", "false");
+          sessionStorage.setItem("cubes", "false");
+          sessionStorage.setItem("fives", "false");
+          sessionStorage.setItem("facts", "false");
+          sessionStorage.setItem("coor", "false");
+          sessionStorage.setItem("base", "false");
+          sessionStorage.setItem("cal", "false");
+          sessionStorage.setItem("comb", "false");
+          sessionStorage.setItem("temp", "false");
+          sessionStorage.setItem("gcd", "false");
+        });
+      });
+    </script>
+  </body>
+</html>
