@@ -11,12 +11,12 @@ body {
 #ad1,   #ad4  {
   height: 600px;
   width: 120px;
-  border: 2px solid #9ecaed;
+  /*border: 2px solid #9ecaed;
   border-width: 10px;
 
   border-radius: 20px;
   animation: bglow 2s ease-in-out infinite alternate;
-  background-color:#262626;
+  background-color:#262626; */
 }
 #adv7{
   border: 2px solid #9ecaed;
