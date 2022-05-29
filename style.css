@@ -440,12 +440,13 @@ input[type="text"]:focus{
   min-height: 7.4%;
   top: 0%;
   bottom: 92.5%;
-  border: 2px solid black;
-  border-width: 2px;
   box-shadow: 0 0 2px 1px blue;
-  border-radius: 0px;
   z-index: 1;
   margin-bottom: 0px;
+  border: 2px solid #9ecaed;
+  border-width: 5px;
+  animation: bglow 2s ease-in-out infinite alternate;
+  border-radius: 20px;
 }
 #topnav a {
   font-family: 'Orbitron', sans-serif;
@@ -454,11 +455,12 @@ input[type="text"]:focus{
   padding: .2% 2%;
   text-decoration: none;
   font-size: 17px;
-  border-right: 5px solid #000099;
+  border-right: 5px solid #9ecaed;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: bglow 2s ease-in-out infinite alternate;
 }
 
 #topnav a:hover {
