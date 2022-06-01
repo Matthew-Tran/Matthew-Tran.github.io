@@ -16,7 +16,7 @@ body {
 
   border-radius: 20px;
   animation: bglow 2s ease-in-out infinite alternate;
-  background-color:#262626; 
+  background-color:#262626;
 }
 #adv7{
   border: 2px solid #9ecaed;
@@ -583,7 +583,7 @@ label, dd{
   align-items: center;
   font-size: 300%;
   background-color: #262626;
-  left: 33%;
+  left: 19%;
   position: absolute;
   height: 60%;
   width: 5%;
@@ -597,7 +597,7 @@ label, dd{
   align-items: center;
   font-size: 300%;
   background-color: #262626;
-  left: 40%;
+  left: 26%;
   position: absolute;
   height: 60%;
   width: 5%;
@@ -612,7 +612,7 @@ label, dd{
   align-items: center;
   font-size: 300%;
   background-color: #262626;
-  left: 47%;
+  left: 33%;
   position: absolute;
   height: 60%;
   width: 5%;
@@ -627,7 +627,7 @@ label, dd{
   align-items: center;
   font-size: 300%;
   background-color: #262626;
-  left: 54%;
+  left: 40%;
   position: absolute;
   height: 60%;
   width: 5%;
@@ -642,7 +642,7 @@ label, dd{
   align-items: center;
   font-size: 300%;
   background-color: #262626;
-  left: 61%;
+  left: 47%;
   position: absolute;
   height: 60%;
   width: 5%;
