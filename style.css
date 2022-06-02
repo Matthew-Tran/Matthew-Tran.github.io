@@ -11,12 +11,12 @@ body {
 #ad1, #ad4  {
   height: 600px;
   width: 120px;
-  /*border: 2px solid #9ecaed;
+  border: 2px solid #9ecaed;
   border-width: 10px;
 
   border-radius: 20px;
   animation: bglow 2s ease-in-out infinite alternate;
-  background-color:#262626; */
+  background-color:#262626;
 }
 #adv7{
   border: 2px solid #9ecaed;
@@ -299,7 +299,6 @@ label, dd{
 }
 #scoreboard #timer{
   position: absolute;
-
   left: 12%;
 }
 #scoreboard #score{
@@ -583,7 +582,7 @@ label, dd{
   align-items: center;
   font-size: 300%;
   background-color: #262626;
-  left: 33%;
+  left: 19%;
   position: absolute;
   height: 60%;
   width: 5%;
@@ -597,7 +596,7 @@ label, dd{
   align-items: center;
   font-size: 300%;
   background-color: #262626;
-  left: 40%;
+  left: 26%;
   position: absolute;
   height: 60%;
   width: 5%;
@@ -612,7 +611,7 @@ label, dd{
   align-items: center;
   font-size: 300%;
   background-color: #262626;
-  left: 47%;
+  left: 33%;
   position: absolute;
   height: 60%;
   width: 5%;
@@ -627,7 +626,7 @@ label, dd{
   align-items: center;
   font-size: 300%;
   background-color: #262626;
-  left: 54%;
+  left: 40%;
   position: absolute;
   height: 60%;
   width: 5%;
@@ -642,7 +641,7 @@ label, dd{
   align-items: center;
   font-size: 300%;
   background-color: #262626;
-  left: 61%;
+  left: 47%;
   position: absolute;
   height: 60%;
   width: 5%;
@@ -678,4 +677,41 @@ label, dd{
   border: 3px solid red;
   outline: none;
 }
- 
+#scoreboard1{
+  cursor: default;
+  position: absolute;
+  top: 5%;
+  right: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+  border: 2px solid orange;
+  border-width: 10px;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 20px 20px 0px 0px;
+  color: white;
+  min-width: 25%;
+  min-height: 30%;
+  animation: bglow3 2s ease-in-out infinite alternate;
+  z-index: -1;
+}
+#scoreboardtimer{
+  cursor: default;
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+  border: 2px solid orange;
+  border-width: 10px;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 20px 20px 0px 0px;
+  color: white;
+  min-width: 25%;
+  min-height: 30%;
+  animation: bglow3 2s ease-in-out infinite alternate;
+  z-index: -1;
+}
