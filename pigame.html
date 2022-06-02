@@ -12,12 +12,18 @@
   </head>
   <body>
     <div id="digitsofpi">
+      <div id="scoreboardtimer">
+          <h3 id="pitimer">Clock: 00:00:00</h3>
+      </div>
+      <div id="scoreboard1">
+        <h3 id="piscore">Score: 0</h3>
+      </div>
       <div id="pigame1">
-        <span class="pidigit" id="first">3</span>
-        <span class="pidigit" id="second">.</span>
-        <span class="pidigit" id="third"><input type="text" id="thirdtext" oninput="myFunction()"></span>
-        <span class="pidigit" id="fourth"></span>
-        <span class="pidigit" id="fifth"></span>
+        <span class="pidigit" id="first"></span>
+        <span class="pidigit" id="second"></span>
+        <span class="pidigit" id="third">3</span>
+        <span class="pidigit" id="fourth">.</span>
+        <span class="pidigit" id="fifth"><input type="text" id="thirdtext" oninput="myFunction()"></span>
       </div>
     </div>
     <div id="resultc">
@@ -43,34 +49,107 @@
         $("#resultc").hide();
         var pi = sessionStorage.getItem("pi");
         pi = pi.replace(/\s/g, "");
+        const timer = document.getElementById("pitimer");
+
+        var hr = 0;
+        var min = 0;
+        var sec = 0;
+        var stoptime = true;
+
+        function startTimer() {
+          if (stoptime == true) {
+            stoptime = false;
+            timerCycle();
+          }
+        }
+        function stopTimer() {
+          if (stoptime == false) {
+            stoptime = true;
+          }
+        }
+
+        function timerCycle() {
+          if (stoptime == false) {
+            sec = parseInt(sec);
+            min = parseInt(min);
+            hr = parseInt(hr);
+
+            sec = sec + 1;
+
+            if (sec == 60) {
+              min = min + 1;
+              sec = 0;
+            }
+            if (min == 60) {
+              hr = hr + 1;
+              min = 0;
+              sec = 0;
+            }
+
+            if (sec < 10 || sec == 0) {
+              sec = '0' + sec;
+            }
+            if (min < 10 || min == 0) {
+              min = '0' + min;
+            }
+            if (hr < 10 || hr == 0) {
+            hr = '0' + hr;
+          }
+
+          timer.innerHTML = "Clock: " + hr + ':' + min + ':' + sec;
+
+          setTimeout("timerCycle()", 1000);
+        }
+      }
+        function resetTimer() {
+        timer.innerHTML = '00:00:00';
+      }
+      startTimer();
         var score = 0;
         var inds = 0;
         function myFunction(){
           if ($("#thirdtext").val().trim() == pi.substring(inds, inds+1)){
             score++;
+            $("#piscore").text("Score: " + score);
             inds++;
             $("#thirdtext").val("");
             if (score == 1){
+              $("#second").text("3");
+              $("#third").text(".");
+              $("#fourth").text("1");
+            }
+            else if (score == 2){
+              $("#first").text("3");
+              $("#second").text(".");
+              $("#third").text("1");
+              $("#fourth").text("4");
+            }
+            else if (score == 3){
               $("#first").text(".");
               $("#second").text("1");
+              $("#third").text("4");
+              $("#fourth").text("1");
             }
             else {
-              $("#first").text(pi.substring(inds-2, inds-1));
-              $("#second").text(pi.substring(inds-1, inds));
+              $("#first").text(pi.substring(inds-4, inds-3));
+              $("#second").text(pi.substring(inds-3, inds-2));
+              $("#third").text(pi.substring(inds-2, inds-1));
+              $("#fourth").text(pi.substring(inds-1, inds));
+
             }
+          }
+          else {
+              $("#fifth").text(pi.substring(inds, inds+1));
+              if (score == 0 || score == 1){
+                $("#piscore").text(score + " digit");
+              }
+              else{
+                  $("#piscore").text(score + " digits");
+              }
+              stopTimer();
+              $("#pitimer").text($("#pitimer").text() + " elapsed");
           }
         }
       </script>
-      <script type="text/javascript">
-        var vglnk = {key: '96bf7c66d2eeffed2a10b23698e3b816'};
-        (function(d, t) {
-          var s = d.createElement(t);
-            s.type = 'text/javascript';
-            s.async = true;
-            s.src = '//cdn.viglink.com/api/vglnk.js';
-        var r = d.getElementsByTagName(t)[0];
-            r.parentNode.insertBefore(s, r);
-          }(document, 'script'));
-    </script>
   </body>
 </html>
