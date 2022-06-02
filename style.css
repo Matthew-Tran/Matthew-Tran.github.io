@@ -16,7 +16,7 @@ body {
 
   border-radius: 20px;
   animation: bglow 2s ease-in-out infinite alternate;
-  background-color:#262626;
+  background-color:#262626; 
 }
 #adv7{
   border: 2px solid #9ecaed;
@@ -583,35 +583,6 @@ label, dd{
   align-items: center;
   font-size: 300%;
   background-color: #262626;
-  left: 19%;
-  position: absolute;
-  height: 60%;
-  width: 5%;
-  border: 5px solid red;
-  border-radius: 20%;
-  animation: bglow4 5s ease-in-out infinite alternate;
-}
-#second{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 300%;
-  background-color: #262626;
-  left: 26%;
-  position: absolute;
-  height: 60%;
-  width: 5%;
-  border: 5px solid red;
-  border-radius: 20%;
-  animation: bglow4 5s ease-in-out infinite alternate;
-}
-
-#third{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 300%;
-  background-color: #262626;
   left: 33%;
   position: absolute;
   height: 60%;
@@ -620,8 +591,7 @@ label, dd{
   border-radius: 20%;
   animation: bglow4 5s ease-in-out infinite alternate;
 }
-
-#fourth{
+#second{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -636,13 +606,43 @@ label, dd{
   animation: bglow4 5s ease-in-out infinite alternate;
 }
 
-#fifth{
+#third{
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 300%;
   background-color: #262626;
   left: 47%;
+  position: absolute;
+  height: 60%;
+  width: 5%;
+  border: 5px solid red;
+  border-radius: 20%;
+  animation: bglow4 5s ease-in-out infinite alternate;
+}
+
+#fourth{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 300%;
+  background-color: #262626;
+  left: 54%;
+  position: absolute;
+  height: 60%;
+  width: 5%;
+  border: 5px solid red;
+  border-radius: 20%;
+  animation: bglow4 5s ease-in-out infinite alternate;
+}
+
+#fifth{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 300%;
+  background-color: #262626;
+  left: 61%;
   position: absolute;
   height: 60%;
   width: 5%;
