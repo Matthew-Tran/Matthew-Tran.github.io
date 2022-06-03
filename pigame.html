@@ -25,26 +25,15 @@
         <span class="pidigit" id="fourth">.</span>
         <span class="pidigit" id="fifth"><input type="text" id="thirdtext" oninput="myFunction()"></span>
       </div>
-    </div>
-    <div id="resultc">
-      <!--<div id="adrow1">
-        <span id="adr1"></span>
-        <span id="adr2"></span>
-        <span id="adr3"></span>
-      </div>-->
-      <div id="result">
-
+      <div id="endgame1">
+        <a href="javascript:window.location.href=window.location.href"><button class="reset">Reset</button></a>
+        <a href="mem.html"><button class="memoryback">Memory Page</button></a>
       </div>
-      <!--<div id="adrow2">
-        <span id="adr4"></span>
-        <span id="adr5"></span>
-        <span id="adr6"></span>
-      </div>-->
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="pi.js"></script>
     <script type="text/javascript">
-      $("#resultc").hide();
       var pi = sessionStorage.getItem("pi");
       pi = pi.replace(/\s/g, "");
       var pi2 = sessionStorage.getItem("pi2");

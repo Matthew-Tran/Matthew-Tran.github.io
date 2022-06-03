@@ -715,3 +715,43 @@ label, dd{
   animation: bglow3 2s ease-in-out infinite alternate;
   z-index: -1;
 }
+#endgame1{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 75%;
+  background-color: #262626;
+  border: 2px solid orange;
+  border-width: 10px;
+  border-radius: 0px 0px 20px 20px;
+  color: white;
+  min-width: 25%;
+  min-height: 30%;
+  animation: bglow3 2s ease-in-out infinite alternate;
+  z-index: 0;
+}
+#endgame1 .reset{
+  color: white;
+  border-radius: 20px;
+  min-width: 150px;
+  min-height:50px;
+  font-family: 'Orbitron', sans-serif;
+  background: #2E8AFF;
+  transition: background .4s;
+}
+#endgame1 .reset:hover{
+  background: #0000FF;
+}
+#endgame1 .memoryback{
+  color: white;
+  border-radius: 20px;
+  min-width: 150px;
+  min-height:50px;
+  font-family: 'Orbitron', sans-serif;
+  background: #006600;
+  transition: background .4s;
+}
+#endgame1 .memoryback:hover{
+  background:  #408c40;
+}
