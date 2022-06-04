@@ -12,20 +12,20 @@
   </head>
   <body>
     <div id="digitsofpi">
-      <div id="scoreboardtimer">
+      <div id="scoreboardtimer1">
           <h3 id="pitimer">Clock: 00:00:00</h3>
       </div>
-      <div id="scoreboard1">
+      <div id="scoreboard2">
         <h3 id="piscore">Score: 0</h3>
       </div>
-      <div id="pigame1">
+      <div id="sqrtgame">
         <span class="pidigit" id="first"></span>
         <span class="pidigit" id="second"></span>
-        <span class="pidigit" id="third">3</span>
+        <span class="pidigit" id="third">1</span>
         <span class="pidigit" id="fourth">.</span>
         <span class="pidigit" id="fifth"><input type="text" id="thirdtext" oninput="myFunction()"></span>
       </div>
-      <div id="endgame1">
+      <div id="endgame2">
         <a href="javascript:window.location.href=window.location.href"><button class="reset">Reset</button></a>
         <a href="mem.html"><button class="memoryback">Memory Page</button></a>
       </div>
@@ -34,12 +34,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript">
       $("#thirdtext").focus();
-      var pi = sessionStorage.getItem("pi");
-      pi = pi.replace(/\s/g, "");
-      var pi2 = sessionStorage.getItem("pi2");
-      pi2 = pi2.replace(/\s/g, "");
+      var s2 = sessionStorage.getItem("sq2");
+      s2 = s2.replace(/\s/g, "");
       const timer = document.getElementById("pitimer");
-      pic = pi + pi2;
       var hr = 0;
       var min = 0;
       var sec = -1;
@@ -98,37 +95,37 @@
       var inds = 0;
       function myFunction(){
 
-        if ($("#thirdtext").val().trim() == pic.substring(inds, inds+1)){
+        if ($("#thirdtext").val().trim() == s2.substring(inds, inds+1)){
           score++;
           $("#piscore").text("Score: " + score);
           inds++;
           $("#thirdtext").val("");
           if (score == 1){
-            $("#second").text("3");
+            $("#second").text("1");
             $("#third").text(".");
-            $("#fourth").text("1");
-          }
-          else if (score == 2){
-            $("#first").text("3");
-            $("#second").text(".");
-            $("#third").text("1");
             $("#fourth").text("4");
           }
-          else if (score == 3){
-            $("#first").text(".");
-            $("#second").text("1");
+          else if (score == 2){
+            $("#first").text("1");
+            $("#second").text(".");
             $("#third").text("4");
             $("#fourth").text("1");
           }
+          else if (score == 3){
+            $("#first").text(".");
+            $("#second").text("4");
+            $("#third").text("1");
+            $("#fourth").text("4");
+          }
           else {
-            $("#first").text(pic.substring(inds-4, inds-3));
-            $("#second").text(pic.substring(inds-3, inds-2));
-            $("#third").text(pic.substring(inds-2, inds-1));
-            $("#fourth").text(pic.substring(inds-1, inds));
+            $("#first").text(s2.substring(inds-4, inds-3));
+            $("#second").text(s2.substring(inds-3, inds-2));
+            $("#third").text(s2.substring(inds-2, inds-1));
+            $("#fourth").text(s2.substring(inds-1, inds));
           }
         }
         else {
-            $("#fifth").text(pic.substring(inds, inds+1));
+            $("#fifth").text(s2.substring(inds, inds+1));
             if (score == 0 || score == 1){
               $("#piscore").text(score + " digit");
             }

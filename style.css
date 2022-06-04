@@ -512,7 +512,6 @@ label, dd{
   text-align: center;
 }
 #pi {
-
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -732,7 +731,7 @@ label, dd{
   text-align: center;
   z-index: 0;
 }
-#endgame1 .reset{
+.reset{
   color: white;
   border-radius: 20px;
   min-width: 20%;
@@ -744,10 +743,10 @@ label, dd{
   left: 10%;
   top: 27%;
 }
-#endgame1 .reset:hover{
+.reset:hover{
   background: #0000FF;
 }
-#endgame1 .memoryback{
+.memoryback{
   color: white;
   border-radius: 20px;
   min-width: 20%;
@@ -759,6 +758,107 @@ label, dd{
   right: 10%;
   top: 27%;
 }
-#endgame1 .memoryback:hover{
+.memoryback:hover{
   background:  #408c40;
+}
+#sqrt2{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 90px;
+  box-shadow: 0 9px red;
+  font-size: 800%;
+  width: 28%;
+}
+#sqrt2:hover{
+  background-color: #000066;
+}
+#scoreboardtimer1{
+  cursor: default;
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+  border: 2px solid #0000ff;
+  border-width: 10px;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 20px 20px 0px 0px;
+  color: white;
+  min-width: 25%;
+  min-height: 30%;
+  animation: bglow5 2s ease-in-out infinite alternate;
+  z-index: -1;
+}
+#scoreboard2{
+  cursor: default;
+  position: absolute;
+  top: 5%;
+  right: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+  border: 2px solid #0000ff;
+  border-width: 10px;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 20px 20px 0px 0px;
+  color: white;
+  min-width: 25%;
+  min-height: 30%;
+  animation: bglow5 2s ease-in-out infinite alternate;
+  z-index: -1;
+}
+#sqrtgame{
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  min-width: 98.6%;
+  min-height: 30%;
+  color: white;
+  background-color: #262626;
+  border: 2px solid #0000ff;
+  border-width: 10px;
+  border-radius: 20px;
+  animation: bglow5 2s ease-in-out infinite alternate;
+  cursor: default;
+  text-align: center;
+}
+#endgame2{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 75%;
+  background-color: #262626;
+  border: 2px solid #0000ff;
+  border-width: 10px;
+  border-radius: 0px 0px 20px 20px;
+  color: white;
+  min-width: 25%;
+  min-height: 30%;
+  animation: bglow5 2s ease-in-out infinite alternate;
+  text-align: center;
+  z-index: 0;
+}
+@-webkit-keyframes bglow5 {
+  from {
+    border-color: #0000ff;
+  }
+
+  to {
+    border-color: #6699ff;
+  }
 }
