@@ -513,7 +513,6 @@ label, dd{
 #pi {
   display: inline-block;
   padding: 15px 25px;
-  font-size: 24px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -523,8 +522,10 @@ label, dd{
   border: none;
   border-radius: 90px;
   box-shadow: 0 9px #FF3D14;
-  font-size: 800%;
-  width: 28%;
+  font-size: 300%;
+  width: 26%;
+  position: absolute;
+  left: 20%;
 }
 
 #pi:hover {background-color: #ff6220;}
@@ -763,7 +764,6 @@ label, dd{
 #sqrt2{
   display: inline-block;
   padding: 15px 25px;
-  font-size: 24px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -773,8 +773,10 @@ label, dd{
   border: none;
   border-radius: 90px;
   box-shadow: 0 9px #000066;
-  font-size: 800%;
-  width: 28%;
+  font-size: 300%;
+  width: 26%;
+  position: absolute;
+  left: 20%;
 }
 #sqrt2:hover{
   background-color: #000f61;
@@ -864,7 +866,6 @@ label, dd{
 #eee{
   display: inline-block;
   padding: 15px 25px;
-  font-size: 24px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -874,8 +875,10 @@ label, dd{
   border: none;
   border-radius: 90px;
   box-shadow: 0 9px #003300;
-  font-size: 800%;
-  width: 28%;
+  font-size: 300%;
+  width: 26%;
+  position: absolute;
+  right: 20%;
 }
 #eee:hover{
   background-color: #003803;
