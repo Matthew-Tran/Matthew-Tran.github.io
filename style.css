@@ -772,12 +772,12 @@ label, dd{
   background-color: blue;
   border: none;
   border-radius: 90px;
-  box-shadow: 0 9px red;
+  box-shadow: 0 9px #000066;
   font-size: 800%;
   width: 28%;
 }
 #sqrt2:hover{
-  background-color: #000066;
+  background-color: #000f61;
 }
 #scoreboardtimer1{
   cursor: default;
@@ -860,4 +860,23 @@ label, dd{
   to {
     border-color: #6699ff;
   }
+}
+#eee{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 90px;
+  box-shadow: 0 9px #003300;
+  font-size: 800%;
+  width: 28%;
+}
+#eee:hover{
+  background-color: #003803;
 }
