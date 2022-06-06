@@ -238,7 +238,7 @@ label, dd{
   align-items: center;
   animation: bglow2 2s ease-in-out infinite alternate;
   cursor: default;
-  z-index: 0;
+  z-index: 2;
   font-family: 'Orbitron', sans-serif;
 }
 #prob{
@@ -272,7 +272,7 @@ label, dd{
 #scoreboard{
   cursor: default;
   position: absolute;
-  top: 5%;
+  top: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,7 +285,7 @@ label, dd{
   min-width: 25%;
   min-height: 30%;
   animation: bglow2 2s ease-in-out infinite alternate;
-  z-index: -1;
+  z-index: 1;
 }
 @-webkit-keyframes bglow2 {
   from {
@@ -310,7 +310,7 @@ label, dd{
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 75%;
+  top: 67%;
   background-color: #262626;
   border: 2px solid #32CD32;
   border-width: 10px;
@@ -319,12 +319,11 @@ label, dd{
   min-width: 25%;
   min-height: 30%;
   animation: bglow2 2s ease-in-out infinite alternate;
-  z-index: 0;
+  z-index: 1;
 }
 #endgame .endgamer{
   position: relative;
   left: 1%;
-  top: 8%;
 }
 #privacy{
   position: absolute;
