@@ -84,7 +84,7 @@ body {
   padding: 15px;
   position: absolute;
   width: 58%;
-  min-height: 70%;
+
   top: 10%;
   left: 19.5%;
   background-color:#262626;
@@ -328,7 +328,7 @@ label, dd{
 }
 #privacy{
   position: absolute;
-  bottom: -60%;
+  bottom: 0%;
   left: 24%;
   border: 2px solid #9ecaed;
   border-width: 3px;
@@ -435,7 +435,6 @@ label, dd{
   position: absolute;
   right: -2%;
   min-width: 60%;
-  min-height: 7.4%;
   top: 0%;
   bottom: 92.5%;
   box-shadow: 0 0 2px 1px blue;
@@ -500,7 +499,6 @@ label, dd{
   z-index: 2;
   border-radius: 2%;
   animation: bglow 2s ease-in-out infinite alternate;
-  min-height: 55%;
   width: 50%;
   color: white;
   padding: 1%;
