@@ -494,40 +494,85 @@ label, dd{
   top: 9%;
   left: 24%;
   right: 24%;
-  bottom: 0%;
-  display:  block;
+  display: flex;
+  justify-content: center;
   border: 10px solid #9ecaed;
   z-index: 2;
-  border-radius: 40px;
+  border-radius: 2%;
   animation: bglow 2s ease-in-out infinite alternate;
-  min-height: 97%;
-  position: absolute;
+  min-height: 55%;
   width: 50%;
   color: white;
   padding: 1%;
+  text-align: center;
 
 }
-#c1{
+#memorygames{
+  position:relative;
   text-align: center;
+  width: 100%;
+  min-height: 50%;
+  padding: 10px;
 }
+
 #pi {
-  display: inline-block;
-  padding: 15px 25px;
   cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
   color: red;
   background-color: orange;
   border: none;
   border-radius: 90px;
   box-shadow: 0 9px #FF3D14;
-  font-size: 300%;
-  width: 26%;
-  position: absolute;
-  left: 20%;
+  width: 30%;
+  height: 50%;
+  font-size: 100px;
+}
+#eee{
+  cursor: pointer;
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 90px;
+  box-shadow: 0 9px #003300;
+  width: 30%;
+  height: 50%;
+  font-size: 100px;
+}
+#eee:hover{
+  background-color: #003803;
+}
+#sqrt2{
+  cursor: pointer;
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 90px;
+  box-shadow: 0 9px #000066;
+  font-size: 100px;
+  width: 30%;
+  height: 50%;
+}
+#sqrt2:hover{
+  background-color: #000f61;
+}
+#phi{
+  cursor: pointer;
+  color: black;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 90px;
+  box-shadow: 0 9px black;
+  font-size: 100px;
+  width: 30%;
+  height: 50%;
+}
+#phi:hover{
+  background-color: #DAA520;
 }
 
+#m2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 #pi:hover {background-color: #ff6220;}
 
 #pi:active {
@@ -535,9 +580,22 @@ label, dd{
   box-shadow: 0 5px #FF3D14;
   transform: translateY(4px);
 }
-#memorygames{
-  padding: 40px;
+#eee:active {
+  background-color: #003300;
+  box-shadow: 0 5px #003300;
+  transform: translateY(4px);
 }
+#sqrt2:active {
+  background-color: #000066;
+  box-shadow: 0 5px #000066;
+  transform: translateY(4px);
+}
+#phi:active {
+  background-color: #FF8C00;
+  box-shadow: 0 5px black;
+  transform: translateY(4px);
+}
+
 #digitsofpi{
   position: absolute;
   top: 20%;
@@ -761,26 +819,6 @@ label, dd{
 .memoryback:hover{
   background:  #408c40;
 }
-#sqrt2{
-  display: inline-block;
-  padding: 15px 25px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: white;
-  background-color: blue;
-  border: none;
-  border-radius: 90px;
-  box-shadow: 0 9px #000066;
-  font-size: 300%;
-  width: 26%;
-  position: absolute;
-  left: 20%;
-}
-#sqrt2:hover{
-  background-color: #000f61;
-}
 #scoreboardtimer1{
   cursor: default;
   position: absolute;
@@ -863,26 +901,7 @@ label, dd{
     border-color: #6699ff;
   }
 }
-#eee{
-  display: inline-block;
-  padding: 15px 25px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: white;
-  background-color: green;
-  border: none;
-  border-radius: 90px;
-  box-shadow: 0 9px #003300;
-  font-size: 300%;
-  width: 26%;
-  position: absolute;
-  right: 20%;
-}
-#eee:hover{
-  background-color: #003803;
-}
+
 #scoreboardtimer2{
   cursor: default;
   position: absolute;
@@ -963,5 +982,87 @@ label, dd{
 
   to {
     border-color: #009933;
+  }
+}
+#scoreboardtimerphi{
+  cursor: default;
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+  border: 2px solid #FFD700;
+  border-width: 10px;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 20px 20px 0px 0px;
+  color: white;
+  min-width: 25%;
+  min-height: 30%;
+  animation: bglow7 2s ease-in-out infinite alternate;
+  z-index: -1;
+}
+#scoreboard1phi{
+  cursor: default;
+  position: absolute;
+  top: 5%;
+  right: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+  border: 2px solid #FFD700;
+  border-width: 10px;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 20px 20px 0px 0px;
+  color: white;
+  min-width: 25%;
+  min-height: 30%;
+  animation: bglow7 2s ease-in-out infinite alternate;
+  z-index: -1;
+}
+#phigame1{
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  min-width: 98.6%;
+  min-height: 30%;
+  color: white;
+  background-color: #262626;
+  border: 2px solid #FFD700;
+  border-width: 10px;
+  border-radius: 20px;
+  animation: bglow7 2s ease-in-out infinite alternate;
+  cursor: default;
+  text-align: center;
+}
+#endgame1phi{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 75%;
+  background-color: #262626;
+  border: 2px solid #FFD700;
+  border-width: 10px;
+  border-radius: 0px 0px 20px 20px;
+  color: white;
+  min-width: 25%;
+  min-height: 30%;
+  animation: bglow7 2s ease-in-out infinite alternate;
+  text-align: center;
+  z-index: 0;
+}
+@-webkit-keyframes bglow7 {
+  from {
+    border-color: #FFD700;
+  }
+
+  to {
+    border-color: #996515;
   }
 }
