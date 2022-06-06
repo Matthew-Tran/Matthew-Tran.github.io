@@ -605,21 +605,22 @@ label, dd{
 }
 #pigame1{
   font-family: 'Orbitron', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 40%;
-  min-width: 98.6%;
-  min-height: 30%;
-  color: white;
-  background-color: #262626;
-  border: 2px solid orange;
-  border-width: 10px;
-  border-radius: 20px;
-  animation: bglow3 2s ease-in-out infinite alternate;
-  cursor: default;
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    min-width: 98.6%;
+    min-height: 30%;
+    color: white;
+    background-color: #262626;
+    border: 2px solid orange;
+    border-width: 10px;
+    border-radius: 20px;
+    animation: bglow3 2s ease-in-out infinite alternate;
+    cursor: default;
+    text-align: center;
+    z-index: 2;
 }
 @-webkit-keyframes bglow3 {
   from {
@@ -733,58 +734,58 @@ label, dd{
 }
 #scoreboard1{
   cursor: default;
-  position: absolute;
-  top: 5%;
-  right: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #262626;
-  border: 2px solid orange;
-  border-width: 10px;
-  font-family: 'Orbitron', sans-serif;
-  border-radius: 20px 20px 0px 0px;
-  color: white;
-  min-width: 25%;
-  min-height: 30%;
-  animation: bglow3 2s ease-in-out infinite alternate;
-  z-index: -1;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+    border: 2px solid orange;
+    border-width: 10px;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 20px 20px 0px 0px;
+    color: white;
+    min-width: 25%;
+    min-height: 30%;
+    animation: bglow3 2s ease-in-out infinite alternate;
+    z-index: 1;
 }
 #scoreboardtimer{
   cursor: default;
-  position: absolute;
-  top: 5%;
-  left: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #262626;
-  border: 2px solid orange;
-  border-width: 10px;
-  font-family: 'Orbitron', sans-serif;
-  border-radius: 20px 20px 0px 0px;
-  color: white;
-  min-width: 25%;
-  min-height: 30%;
-  animation: bglow3 2s ease-in-out infinite alternate;
-  z-index: -1;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+    border: 2px solid orange;
+    border-width: 10px;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 20px 20px 0px 0px;
+    color: white;
+    min-width: 25%;
+    min-height: 30%;
+    animation: bglow3 2s ease-in-out infinite alternate;
+    z-index: 1;
 }
 #endgame1{
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 75%;
-  background-color: #262626;
-  border: 2px solid orange;
-  border-width: 10px;
-  border-radius: 0px 0px 20px 20px;
-  color: white;
-  min-width: 25%;
-  min-height: 30%;
-  animation: bglow3 2s ease-in-out infinite alternate;
-  text-align: center;
-  z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 67%;
+    background-color: #262626;
+    border: 2px solid orange;
+    border-width: 10px;
+    border-radius: 0px 0px 20px 20px;
+    color: white;
+    min-width: 25%;
+    min-height: 30%;
+    animation: bglow3 2s ease-in-out infinite alternate;
+    text-align: center;
+    z-index: 1;
 }
 .reset{
   color: white;
@@ -819,7 +820,7 @@ label, dd{
 #scoreboardtimer1{
   cursor: default;
   position: absolute;
-  top: 5%;
+  top: 10%;
   left: 20%;
   display: flex;
   justify-content: center;
@@ -833,12 +834,12 @@ label, dd{
   min-width: 25%;
   min-height: 30%;
   animation: bglow5 2s ease-in-out infinite alternate;
-  z-index: -1;
+  z-index: 1;
 }
 #scoreboard2{
   cursor: default;
   position: absolute;
-  top: 5%;
+  top: 10%;
   right: 20%;
   display: flex;
   justify-content: center;
@@ -852,7 +853,7 @@ label, dd{
   min-width: 25%;
   min-height: 30%;
   animation: bglow5 2s ease-in-out infinite alternate;
-  z-index: -1;
+  z-index: 1;
 }
 #sqrtgame{
   font-family: 'Orbitron', sans-serif;
@@ -871,13 +872,14 @@ label, dd{
   animation: bglow5 2s ease-in-out infinite alternate;
   cursor: default;
   text-align: center;
+  z-index: 2;
 }
 #endgame2{
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 75%;
+  top: 67%;
   background-color: #262626;
   border: 2px solid #0000ff;
   border-width: 10px;
@@ -887,7 +889,7 @@ label, dd{
   min-height: 30%;
   animation: bglow5 2s ease-in-out infinite alternate;
   text-align: center;
-  z-index: 0;
+  z-index: 1;
 }
 @-webkit-keyframes bglow5 {
   from {
@@ -902,7 +904,7 @@ label, dd{
 #scoreboardtimer2{
   cursor: default;
   position: absolute;
-  top: 5%;
+  top: 10%;
   left: 20%;
   display: flex;
   justify-content: center;
@@ -916,12 +918,12 @@ label, dd{
   min-width: 25%;
   min-height: 30%;
   animation: bglow6 2s ease-in-out infinite alternate;
-  z-index: -1;
+  z-index: 1;
 }
 #scoreboard3{
   cursor: default;
   position: absolute;
-  top: 5%;
+  top: 10%;
   right: 20%;
   display: flex;
   justify-content: center;
@@ -935,7 +937,7 @@ label, dd{
   min-width: 25%;
   min-height: 30%;
   animation: bglow6 2s ease-in-out infinite alternate;
-  z-index: -1;
+  z-index: 1;
 }
 #egame{
   font-family: 'Orbitron', sans-serif;
@@ -954,13 +956,14 @@ label, dd{
   animation: bglow6 2s ease-in-out infinite alternate;
   cursor: default;
   text-align: center;
+  z-index: 2;
 }
 #endgame3{
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 75%;
+  top: 67%;
   background-color: #262626;
   border: 2px solid #006117;
   border-width: 10px;
@@ -970,7 +973,7 @@ label, dd{
   min-height: 30%;
   animation: bglow6 2s ease-in-out infinite alternate;
   text-align: center;
-  z-index: 0;
+  z-index: 1;
 }
 @-webkit-keyframes bglow6 {
   from {
@@ -984,7 +987,7 @@ label, dd{
 #scoreboardtimerphi{
   cursor: default;
   position: absolute;
-  top: 5%;
+  top: 10%;
   left: 20%;
   display: flex;
   justify-content: center;
@@ -998,12 +1001,12 @@ label, dd{
   min-width: 25%;
   min-height: 30%;
   animation: bglow7 2s ease-in-out infinite alternate;
-  z-index: -1;
+  z-index: 1;
 }
 #scoreboard1phi{
   cursor: default;
   position: absolute;
-  top: 5%;
+  top: 10%;
   right: 20%;
   display: flex;
   justify-content: center;
@@ -1017,7 +1020,7 @@ label, dd{
   min-width: 25%;
   min-height: 30%;
   animation: bglow7 2s ease-in-out infinite alternate;
-  z-index: -1;
+  z-index: 1;
 }
 #phigame1{
   font-family: 'Orbitron', sans-serif;
@@ -1036,13 +1039,14 @@ label, dd{
   animation: bglow7 2s ease-in-out infinite alternate;
   cursor: default;
   text-align: center;
+  z-index: 2;
 }
 #endgame1phi{
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 75%;
+  top: 67%;
   background-color: #262626;
   border: 2px solid #FFD700;
   border-width: 10px;
@@ -1052,7 +1056,7 @@ label, dd{
   min-height: 30%;
   animation: bglow7 2s ease-in-out infinite alternate;
   text-align: center;
-  z-index: 0;
+  z-index: 1;
 }
 @-webkit-keyframes bglow7 {
   from {
