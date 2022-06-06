@@ -95,7 +95,7 @@ body {
   color: white;
   text-align: center;
   animation: bglow 2s ease-in-out infinite alternate;
-  
+
 }
 
 @-webkit-keyframes bglow {
@@ -522,6 +522,7 @@ label, dd{
   width: 30%;
   height: 50%;
   font-size: 100px;
+  text-align: center;
 }
 #eee{
   cursor: pointer;
@@ -533,6 +534,7 @@ label, dd{
   width: 30%;
   height: 50%;
   font-size: 100px;
+  text-align: center;
 }
 #eee:hover{
   background-color: #003803;
@@ -547,6 +549,7 @@ label, dd{
   font-size: 100px;
   width: 30%;
   height: 50%;
+  text-align: center;
 }
 #sqrt2:hover{
   background-color: #000f61;
@@ -561,6 +564,7 @@ label, dd{
   font-size: 100px;
   width: 30%;
   height: 50%;
+  text-align: center;
 }
 #phi:hover{
   background-color: #DAA520;
