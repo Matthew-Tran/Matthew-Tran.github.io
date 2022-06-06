@@ -95,7 +95,7 @@ body {
   color: white;
   text-align: center;
   animation: bglow 2s ease-in-out infinite alternate;
-
+  
 }
 
 @-webkit-keyframes bglow {
