@@ -523,6 +523,9 @@ label, dd{
   height: 50%;
   font-size: 100px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0; padding-right: 0;
 }
 #eee{
   cursor: pointer;
@@ -534,7 +537,7 @@ label, dd{
   width: 30%;
   height: 50%;
   font-size: 100px;
-  text-align: center;
+  padding-left: 0; padding-right: 0;
 }
 #eee:hover{
   background-color: #003803;
@@ -549,7 +552,7 @@ label, dd{
   font-size: 100px;
   width: 30%;
   height: 50%;
-  text-align: center;
+  padding-left: 0; padding-right: 0;
 }
 #sqrt2:hover{
   background-color: #000f61;
@@ -564,7 +567,7 @@ label, dd{
   font-size: 100px;
   width: 30%;
   height: 50%;
-  text-align: center;
+  padding-left: 0; padding-right: 0;
 }
 #phi:hover{
   background-color: #DAA520;
