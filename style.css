@@ -239,7 +239,6 @@ label, dd{
   animation: bglow2 2s ease-in-out infinite alternate;
   cursor: default;
   z-index: 2;
-  font-family: 'Orbitron', sans-serif;
 }
 #prob{
   display: inline;
@@ -279,7 +278,6 @@ label, dd{
   background-color: #262626;
   border: 2px solid #32CD32;
   border-width: 10px;
-  font-family: 'Orbitron', sans-serif;
   border-radius: 20px 20px 0px 0px;
   color: white;
   min-width: 25%;
@@ -621,7 +619,6 @@ label, dd{
   align-items: center;
 }
 #pigame1{
-  font-family: 'Orbitron', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -759,7 +756,6 @@ label, dd{
     background-color: #262626;
     border: 2px solid orange;
     border-width: 10px;
-    font-family: 'Orbitron', sans-serif;
     border-radius: 20px 20px 0px 0px;
     color: white;
     min-width: 25%;
@@ -778,7 +774,6 @@ label, dd{
     background-color: #262626;
     border: 2px solid orange;
     border-width: 10px;
-    font-family: 'Orbitron', sans-serif;
     border-radius: 20px 20px 0px 0px;
     color: white;
     min-width: 25%;
@@ -844,7 +839,6 @@ label, dd{
   background-color: #262626;
   border: 2px solid #0000ff;
   border-width: 10px;
-  font-family: 'Orbitron', sans-serif;
   border-radius: 20px 20px 0px 0px;
   color: white;
   min-width: 25%;
@@ -863,7 +857,6 @@ label, dd{
   background-color: #262626;
   border: 2px solid #0000ff;
   border-width: 10px;
-  font-family: 'Orbitron', sans-serif;
   border-radius: 20px 20px 0px 0px;
   color: white;
   min-width: 25%;
@@ -872,7 +865,6 @@ label, dd{
   z-index: 1;
 }
 #sqrtgame{
-  font-family: 'Orbitron', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -928,7 +920,6 @@ label, dd{
   background-color: #262626;
   border: 2px solid #006117;
   border-width: 10px;
-  font-family: 'Orbitron', sans-serif;
   border-radius: 20px 20px 0px 0px;
   color: white;
   min-width: 25%;
@@ -947,7 +938,6 @@ label, dd{
   background-color: #262626;
   border: 2px solid #006117;
   border-width: 10px;
-  font-family: 'Orbitron', sans-serif;
   border-radius: 20px 20px 0px 0px;
   color: white;
   min-width: 25%;
@@ -956,7 +946,6 @@ label, dd{
   z-index: 1;
 }
 #egame{
-  font-family: 'Orbitron', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1011,7 +1000,6 @@ label, dd{
   background-color: #262626;
   border: 2px solid #FFD700;
   border-width: 10px;
-  font-family: 'Orbitron', sans-serif;
   border-radius: 20px 20px 0px 0px;
   color: white;
   min-width: 25%;
@@ -1030,7 +1018,6 @@ label, dd{
   background-color: #262626;
   border: 2px solid #FFD700;
   border-width: 10px;
-  font-family: 'Orbitron', sans-serif;
   border-radius: 20px 20px 0px 0px;
   color: white;
   min-width: 25%;
@@ -1039,7 +1026,6 @@ label, dd{
   z-index: 1;
 }
 #phigame1{
-  font-family: 'Orbitron', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
