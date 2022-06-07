@@ -725,8 +725,7 @@ label, dd{
   height: 90%;
   width: 100%;
   border-radius: 15%;
-  background-color: #262626;
-  border: 2px solid black;
+  background-color: black;
   color: white;
   font-size: 100%;
   text-align: center;
@@ -736,7 +735,7 @@ label, dd{
 
 }
 #thirdtext:focus{
-  border: 3px solid red;
+
   outline: none;
 }
 #scoreboard1{
