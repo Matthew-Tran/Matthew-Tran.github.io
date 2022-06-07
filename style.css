@@ -469,7 +469,6 @@ label, dd{
   color: #78cce2;
 }
 #mta{
-  background-color: #222222;
   position: absolute;
   top: 9%;
   left: 0%;
@@ -481,8 +480,6 @@ label, dd{
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-top: 10px solid #9ecaed;
-  border-bottom: 10px solid #9ecaed;
   animation: bglow 2s ease-in-out infinite alternate;
   z-index: 1;
 }
@@ -492,8 +489,6 @@ label, dd{
   top: 9%;
   left: 24%;
   right: 24%;
-  display: flex;
-  justify-content: center;
   border: 10px solid #9ecaed;
   z-index: 2;
   border-radius: 2%;
@@ -503,6 +498,21 @@ label, dd{
   padding: 1%;
   text-align: center;
 
+}
+#choices1{
+  background-color:#262626;
+  position: absolute;
+  top: 1%;
+  left: 24%;
+  right: 24%;
+  border: 10px solid #9ecaed;
+  z-index: 2;
+  border-radius: 2%;
+  animation: bglow 2s ease-in-out infinite alternate;
+  width: 50%;
+  color: white;
+  padding: 1%;
+  text-align: center;
 }
 #memorygames{
   position:relative;
