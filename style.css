@@ -253,11 +253,9 @@ label, dd{
   font-size: 30px;
   width: 150px;
   transition-duration: .5s;
-  font-family: 'Orbitron', sans-serif;
 }
 #basec{
   display: inline;
-  font-family: 'Orbitron', sans-serif;
 }
 #answer:hover{
   border: 5px solid blue;
@@ -393,7 +391,6 @@ label, dd{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Orbitron', sans-serif;
 }
 #adr1, #adr2, #adr3, #adr4, #adr5, #adr6{
   height: 250px;
@@ -728,7 +725,6 @@ label, dd{
   }
 }
 #thirdtext{
-  font-family: 'Orbitron', sans-serif;
   height: 90%;
   width: 100%;
   border-radius: 15%;
