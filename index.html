@@ -182,6 +182,13 @@
             <option value='300'>300 seconds</option>
             <option value='600'>600 seconds</option>
           </select>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+          Decimals (up to 3):&nbsp;<input name='decimals' type='text' id="dec" style="width:1%">
         </div>
         </p>
       </form>
@@ -227,6 +234,7 @@
         }
       });
       $(".submitter").click(function(){
+        sessionStorage.setItem("decim", $("#dec").val());
         sessionStorage.setItem("time", $("#selection").val());
 
         sessionStorage.setItem("addli", $("#add_left_min").val());
