@@ -52,6 +52,9 @@
       window.history.replaceState( null, null, window.location.href );
     }
     $("#resultc").hide();
+    if (sessionStorage.getItem("durations") != ""){
+      sessionStorage.setItem("time", sessionStorage.getItem("durations"));
+    }
     $("#timer").text("Time: " + String(sessionStorage.getItem("time")));
     var timeleft = parseInt(sessionStorage.getItem("time")) - 1;
     var downloadTimer = setInterval(function(){

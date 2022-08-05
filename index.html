@@ -188,6 +188,8 @@
             <option value='300'>300 seconds</option>
             <option value='600'>600 seconds</option>
           </select>
+          or
+          <input name='duration' type='text' id="durations" style="width:5%">
         &nbsp;
         &nbsp;
         &nbsp;
@@ -240,6 +242,7 @@
         }
       });
       $(".submitter").click(function(){
+        sessionStorage.setItem("durations", $("#durations").val());
         sessionStorage.setItem("decim", $("#dec").val());
         sessionStorage.setItem("time", $("#selection").val());
 
@@ -431,6 +434,7 @@
         }
       });
       $(".zen").click(function(){
+        sessionStorage.setItem("decim", $("#dec").val());
         sessionStorage.setItem("time", $("#selection").val());
 
         sessionStorage.setItem("addli", $("#add_left_min").val());
@@ -452,10 +456,10 @@
         sessionStorage.setItem("divri", $("#div_right_min").val());
         sessionStorage.setItem("divra", $("#div_right_max").val());
 
-        sessionStorage.setItem("fli", $("#frac_left_min").val());
-        sessionStorage.setItem("fla", $("#frac_left_max").val());
-        sessionStorage.setItem("fri", $("#frac_right_min").val());
-        sessionStorage.setItem("fra", $("#frac_right_max").val());
+        sessionStorage.setItem("frli", $("#frac_left_min").val());
+        sessionStorage.setItem("frla", $("#frac_left_max").val());
+        sessionStorage.setItem("frri", $("#frac_right_min").val());
+        sessionStorage.setItem("frra", $("#frac_right_max").val());
 
         sessionStorage.setItem("sqrli", $("#squares_left_min").val());
         sessionStorage.setItem("sqrla", $("#squares_left_max").val());
