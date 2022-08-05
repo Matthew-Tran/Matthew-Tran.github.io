@@ -5,7 +5,7 @@
      crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>FastMafs - The Ultimate Mental Math Training Website</title>
-    <meta name="description" content="The ultimate mental math training website. Become the ultimate calculator of the world.">
+    <meta name="description" content="The ultimate mental math training website. If you want to improve your score on a quant mental math test or want to impress your friends, this is the site for you.">
     <meta name="keywords" content="mental math, mental math game, memorization of pi, digits of pi, pi world record, quick mafs, speed math, speed maths, arithmetic, addition, subtraction, multiplication, division, quick math, math practice, mental math practice">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
       <a class="active" href="javascript:window.location.href=window.location.href">Home</a>
       <a href="mem.html">Memory Games</a>
       <!--<a href="lb.html">Leaderboards</a>-->
-      <a href="mt.html">Math Tricks</a>
+      <a href="mt.html" id="ltomt">Math Tricks</a>
     </span>
 
     <!--<span id="ad1"></span>-->
@@ -623,6 +623,9 @@
           event.preventDefault();
           alert("You didn't select anything.");
         }
+      });
+      $("#ltomt").click(function(){
+          sessionStorage.setItem("time", "30");
       });
     });
     </script>

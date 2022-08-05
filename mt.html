@@ -30,16 +30,84 @@
       </div>
       <div id="mta">
         <span id="choices1">
-          <p>Here, you can learn useful tricks in solving math expressions. In each section, the description of the trick and examples are shown along with a uniquely configured game for practice using the trick. </p>
-          <a href="foil.html"><button class="submitter2">FOILing Basics</button></a>
-          <a href="fives.html"><button class="submitter1">Multiplying two numbers that both end in 5</button></a>
-          <a href="tfi.html"><button class="submitter">Multiplying by 25</button></a>
+          <p>Here are a couple of resources that you can use to improve your mental math. </p>
+          <a href="https://www.amazon.com/Secrets-Mental-Math-Mathemagicians-Calculation-ebook/dp/B000Q80SM6/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=" style="color:red">Secrets of Mental Math</a>
+        </br>
+          <a href="http://bryantheath.com/files/2018/04/Heath_NSTricks_revA.pdf" style="color:red">Heath's Number Sense Tricks</a>
+        </br>
+          <a href="https://www.youtube.com/c/tecmath" style="color:red">tecmath</a>
+          <p>Clicking on a button will lead you to a game where you can train a specific skill.</p>
+          <a href="game.html"><button class="submitter" id="foil">FOILing Basics</button></a>
+          <a href="game.html"><button class="submitter1" id="fivesmult">Multiplying two numbers that both end in 5</button></a>
+          <a href="game.html"><button class="submitter2" id="multtf">Multiplying by 25</button></a>
         </span>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
+    $(document).ready(function(){
+      $("#foil").click(function(){
+        sessionStorage.setItem("durations", "120");
+        sessionStorage.setItem("mulli", "10");
+        sessionStorage.setItem("mulla", "99");
+        sessionStorage.setItem("mulri", "10");
+        sessionStorage.setItem("mulra", "99");
+        sessionStorage.setItem("mul", "true");
+        sessionStorage.setItem("sub", "false");
+        sessionStorage.setItem("add", "false");
+        sessionStorage.setItem("div", "false");
+        sessionStorage.setItem("squares", "false");
+        sessionStorage.setItem("cubes", "false");
+        sessionStorage.setItem("fives", "false");
+        sessionStorage.setItem("facts", "false");
+        sessionStorage.setItem("coor", "false");
+        sessionStorage.setItem("base", "false");
+        sessionStorage.setItem("cal", "false");
+        sessionStorage.setItem("comb", "false");
+        sessionStorage.setItem("temp", "false");
+        sessionStorage.setItem("gcd", "false");
+      });
+      $("#fivesmult").click(function(){
+        sessionStorage.setItem("durations", "120");
+        sessionStorage.setItem("fli", "5");
+        sessionStorage.setItem("fla", "100");
+        sessionStorage.setItem("fri", "5");
+        sessionStorage.setItem("fra", "100");
+        sessionStorage.setItem("mul", "false");
+        sessionStorage.setItem("sub", "false");
+        sessionStorage.setItem("add", "false");
+        sessionStorage.setItem("div", "false");
+        sessionStorage.setItem("squares", "false");
+        sessionStorage.setItem("cubes", "false");
+        sessionStorage.setItem("fives", "true");
+        sessionStorage.setItem("facts", "false");
+        sessionStorage.setItem("coor", "false");
+        sessionStorage.setItem("base", "false");
+        sessionStorage.setItem("cal", "false");
+        sessionStorage.setItem("comb", "false");
+        sessionStorage.setItem("temp", "false");
+        sessionStorage.setItem("gcd", "false");
+      });
+      $("#multtf").click(function(){
+        sessionStorage.setItem("durations", "120");
+        sessionStorage.setItem("tfi", "true");
+        sessionStorage.setItem("mul", "false");
+        sessionStorage.setItem("sub", "false");
+        sessionStorage.setItem("add", "false");
+        sessionStorage.setItem("div", "false");
+        sessionStorage.setItem("squares", "false");
+        sessionStorage.setItem("cubes", "false");
+        sessionStorage.setItem("fives", "false");
+        sessionStorage.setItem("facts", "false");
+        sessionStorage.setItem("coor", "false");
+        sessionStorage.setItem("base", "false");
+        sessionStorage.setItem("cal", "false");
+        sessionStorage.setItem("comb", "false");
+        sessionStorage.setItem("temp", "false");
+        sessionStorage.setItem("gcd", "false");
+      });
+    });
     </script>
   </body>
 </html>

@@ -127,6 +127,9 @@
       if (sessionStorage.getItem("madd") == "true"){
         options1.push("madd");
       }
+      if (sessionStorage.getItem("tfi") == "true"){
+        options1.push("tfi");
+      }
       var chosen = "";
 
       var functions = {
@@ -351,6 +354,21 @@
                }
             }
           }
+        },
+        tfi: function(){
+          var choice = Math.floor(Math.random() * 2);
+          var first, second;
+          if (choice == 0){
+            first =  25;
+            second  =  Math.floor(Math.random() * ((1000) - parseInt(2)) + 1)  +  parseInt(2);
+          }
+          else if (choice == 1){
+            second =  25;
+            first  =  Math.floor(Math.random() * ((1000) - parseInt(2)) + 1)  +  parseInt(2);
+          }
+          sessionStorage.setItem("first", String(first));
+          sessionStorage.setItem("second", String(second));
+          $("#prob").text(first + "×" + second + "=");
         },
         squares: function(){
           var first = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("sqrla")) - parseInt(sessionStorage.getItem("sqrli")) + 1))  +  parseInt(sessionStorage.getItem("sqrli"));
@@ -760,7 +778,7 @@
             chooser();
           }
         }
-        else if (chosen == "multiplication" || chosen == "fives"){
+        else if (chosen == "multiplication" || chosen == "fives" || chosen == "tfi" ){
           var ans;
           if (sessionStorage.getItem("decim") == "2"){
             ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) * parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(10));
