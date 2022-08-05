@@ -81,9 +81,73 @@
       if (sessionStorage.getItem("gcd") == "true"){
         options1.push("gcd");
       }
+      if (sessionStorage.getItem("fadd") == "true"){
+        options1.push("fadd");
+      }
+      if (sessionStorage.getItem("sadd") == "true"){
+        options1.push("sadd");
+      }
+      if (sessionStorage.getItem("dadd") == "true"){
+        options1.push("dadd");
+      }
+      if (sessionStorage.getItem("madd") == "true"){
+        options1.push("madd");
+      }
+      if (sessionStorage.getItem("tfi") == "true"){
+        options1.push("tfi");
+      }
       var chosen = "";
 
       var functions = {
+        dadd: function(){
+          var first, second, third, fourth;
+          first = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frla")) - parseInt(sessionStorage.getItem("frli")) + 1))  +  parseInt(sessionStorage.getItem("frli"));
+          third = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frla")) - parseInt(sessionStorage.getItem("frli")) + 1))  +  parseInt(sessionStorage.getItem("frli"));
+          second = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frra")) - parseInt(sessionStorage.getItem("frri")) + 1))  +  parseInt(sessionStorage.getItem("frri"));
+          fourth = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frra")) - parseInt(sessionStorage.getItem("frri")) + 1))  +  parseInt(sessionStorage.getItem("frri"));
+          sessionStorage.setItem("first", String(first));
+          sessionStorage.setItem("second", String(second));
+          sessionStorage.setItem("third", String(third));
+          sessionStorage.setItem("fourth", String(fourth));
+
+          $("#prob").html("<table id='arithfrac'><tr><td><div id='fraction'><div class='numer'>"+first+"</div><div class='denom'>"+second+"</div></div></td><td><span id='operation'>÷</span></td><td><div id='fraction'><div class='numer'>"+third+"</div><div class='denom'>"+fourth+"</div></div></td><td>=</td></tr></table>");
+        },
+        madd: function(){
+          var first, second, third, fourth;
+          first = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frla")) - parseInt(sessionStorage.getItem("frli")) + 1))  +  parseInt(sessionStorage.getItem("frli"));
+          third = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frla")) - parseInt(sessionStorage.getItem("frli")) + 1))  +  parseInt(sessionStorage.getItem("frli"));
+          second = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frra")) - parseInt(sessionStorage.getItem("frri")) + 1))  +  parseInt(sessionStorage.getItem("frri"));
+          fourth = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frra")) - parseInt(sessionStorage.getItem("frri")) + 1))  +  parseInt(sessionStorage.getItem("frri"));
+          sessionStorage.setItem("first", String(first));
+          sessionStorage.setItem("second", String(second));
+          sessionStorage.setItem("third", String(third));
+          sessionStorage.setItem("fourth", String(fourth));
+          $("#prob").html("<table id='arithfrac'><tr><td><div id='fraction'><div class='numer'>"+first+"</div><div class='denom'>"+second+"</div></div></td><td><span id='operation'>×</span></td><td><div id='fraction'><div class='numer'>"+third+"</div><div class='denom'>"+fourth+"</div></div></td><td>=</td></tr></table>");
+        },
+        sadd: function(){
+          var first, second, third, fourth;
+          first = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frla")) - parseInt(sessionStorage.getItem("frli")) + 1))  +  parseInt(sessionStorage.getItem("frli"));
+          third = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frla")) - parseInt(sessionStorage.getItem("frli")) + 1))  +  parseInt(sessionStorage.getItem("frli"));
+          second = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frra")) - parseInt(sessionStorage.getItem("frri")) + 1))  +  parseInt(sessionStorage.getItem("frri"));
+          fourth = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frra")) - parseInt(sessionStorage.getItem("frri")) + 1))  +  parseInt(sessionStorage.getItem("frri"));
+          sessionStorage.setItem("first", String(first));
+          sessionStorage.setItem("second", String(second));
+          sessionStorage.setItem("third", String(third));
+          sessionStorage.setItem("fourth", String(fourth));
+          $("#prob").html("<table id='arithfrac'><tr><td><div id='fraction'><div class='numer'>"+first+"</div><div class='denom'>"+second+"</div></div></td><td><span id='operation'>-</span></td><td><div id='fraction'><div class='numer'>"+third+"</div><div class='denom'>"+fourth+"</div></div></td><td>=</td></tr></table>");
+        },
+        fadd: function(){
+          var first, second, third, fourth;
+          first = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frla")) - parseInt(sessionStorage.getItem("frli")) + 1))  +  parseInt(sessionStorage.getItem("frli"));
+          third = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frla")) - parseInt(sessionStorage.getItem("frli")) + 1))  +  parseInt(sessionStorage.getItem("frli"));
+          second = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frra")) - parseInt(sessionStorage.getItem("frri")) + 1))  +  parseInt(sessionStorage.getItem("frri"));
+          fourth = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frra")) - parseInt(sessionStorage.getItem("frri")) + 1))  +  parseInt(sessionStorage.getItem("frri"));
+          sessionStorage.setItem("first", String(first));
+          sessionStorage.setItem("second", String(second));
+          sessionStorage.setItem("third", String(third));
+          sessionStorage.setItem("fourth", String(fourth));
+          $("#prob").html("<table id='arithfrac'><tr><td><div id='fraction'><div class='numer'>"+first+"</div><div class='denom'>"+second+"</div></div></td><td><span id='operation'>+</span></td><td><div id='fraction'><div class='numer'>"+third+"</div><div class='denom'>"+fourth+"</div></div></td><td>=</td></tr></table>");
+        },
         addition: function(){
           var first, second;
           var rand1, rand2;
@@ -257,6 +321,21 @@
                }
             }
           }
+        },
+        tfi: function(){
+          var choice = Math.floor(Math.random() * 2);
+          var first, second;
+          if (choice == 0){
+            first =  25;
+            second  =  Math.floor(Math.random() * ((1000) - parseInt(2)) + 1)  +  parseInt(2);
+          }
+          else if (choice == 1){
+            second =  25;
+            first  =  Math.floor(Math.random() * ((1000) - parseInt(2)) + 1)  +  parseInt(2);
+          }
+          sessionStorage.setItem("first", String(first));
+          sessionStorage.setItem("second", String(second));
+          $("#prob").text(first + "×" + second + "=");
         },
         squares: function(){
           var first = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("sqrla")) - parseInt(sessionStorage.getItem("sqrli")) + 1))  +  parseInt(sessionStorage.getItem("sqrli"));
@@ -482,8 +561,149 @@
           }
         }
       };
+
       function myFunction() {
-        if (chosen == "addition"){
+        if (chosen == "fadd"){
+          function gcd_two_numbers(x, y) {
+            if ((typeof x !== 'number') || (typeof y !== 'number'))
+            return false;
+            x = Math.abs(x);
+            y = Math.abs(y);
+            while(y) {
+              var t = y;
+              y = x % y;
+              x = t;
+            }
+            return x;
+          }
+          var sum = parseInt(sessionStorage.getItem("first")) * parseInt(sessionStorage.getItem("fourth")) + parseInt(sessionStorage.getItem("third")) * parseInt(sessionStorage.getItem("second"));
+          var product = parseInt(sessionStorage.getItem("second")) * parseInt(sessionStorage.getItem("fourth"));
+          var gcd = gcd_two_numbers(sum, product);
+          sum = sum/gcd;
+          product = product/gcd;
+          if (product == 1){
+            if ($("#answer").val() == sum){
+              score++;
+              $("#answer").val("");
+              chooser();
+            }
+          }
+          else {
+            var ans = $("#answer").val().replace(/\s/g, '');
+            if (ans == sum + "/" + product){
+              score++;
+              $("#answer").val("");
+              chooser();
+            }
+          }
+
+        }
+        else if (chosen == "sadd"){
+          function gcd_two_numbers(x, y) {
+            if ((typeof x !== 'number') || (typeof y !== 'number'))
+            return false;
+            x = Math.abs(x);
+            y = Math.abs(y);
+            while(y) {
+              var t = y;
+              y = x % y;
+              x = t;
+            }
+            return x;
+          }
+          var sum = parseInt(sessionStorage.getItem("first")) * parseInt(sessionStorage.getItem("fourth")) - parseInt(sessionStorage.getItem("third")) * parseInt(sessionStorage.getItem("second"));
+          var product = parseInt(sessionStorage.getItem("second")) * parseInt(sessionStorage.getItem("fourth"));
+          var gcd = gcd_two_numbers(sum, product);
+          sum = sum/gcd;
+          product = product/gcd;
+          if (product == 1){
+            if ($("#answer").val() == sum){
+              score++;
+              $("#answer").val("");
+              chooser();
+            }
+          }
+          else {
+            var ans = $("#answer").val().replace(/\s/g, '');
+            if (ans == sum + "/" + product){
+              score++;
+              $("#answer").val("");
+              chooser();
+            }
+          }
+
+        }
+        else if (chosen == "madd"){
+          function gcd_two_numbers(x, y) {
+            if ((typeof x !== 'number') || (typeof y !== 'number'))
+            return false;
+            x = Math.abs(x);
+            y = Math.abs(y);
+            while(y) {
+              var t = y;
+              y = x % y;
+              x = t;
+            }
+            return x;
+          }
+          var sum = parseInt(sessionStorage.getItem("first")) * parseInt(sessionStorage.getItem("third"));
+          var product = parseInt(sessionStorage.getItem("second")) * parseInt(sessionStorage.getItem("fourth"));
+          var gcd = gcd_two_numbers(sum, product);
+          sum = sum/gcd;
+          product = product/gcd;
+          if (product == 1){
+            if ($("#answer").val() == sum){
+              score++;
+              $("#answer").val("");
+              chooser();
+            }
+          }
+          else {
+            var ans = $("#answer").val().replace(/\s/g, '');
+            if (ans == sum + "/" + product){
+              score++;
+              $("#answer").val("");
+              chooser();
+            }
+          }
+
+        }
+        else if (chosen == "dadd"){
+          function gcd_two_numbers(x, y) {
+            if ((typeof x !== 'number') || (typeof y !== 'number'))
+            return false;
+            x = Math.abs(x);
+            y = Math.abs(y);
+            while(y) {
+              var t = y;
+              y = x % y;
+              x = t;
+            }
+            return x;
+          }
+          var sum = parseInt(sessionStorage.getItem("first")) * parseInt(sessionStorage.getItem("fourth"));
+          var product = parseInt(sessionStorage.getItem("second")) * parseInt(sessionStorage.getItem("third"));
+          var gcd = gcd_two_numbers(sum, product);
+          sum = sum/gcd;
+          product = product/gcd;
+          if (product == 1){
+            if ($("#answer").val() == sum){
+              score++;
+              $("#answer").val("");
+              chooser();
+            }
+          }
+          else {
+            var ans = $("#answer").val().replace(/\s/g, '');
+            if (ans == sum + "/" + product){
+              score++;
+              $("#answer").val("");
+              chooser();
+            }
+          }
+
+        }
+        else if (chosen == "addition"){
         //  alert(parseDouble(sessionStorage.getItem("first")) + parseDouble(sessionStorage.getItem("second")));
         var ans;
         if (sessionStorage.getItem("decim") == "2"){
@@ -525,7 +745,7 @@
             chooser();
           }
         }
-        else if (chosen == "multiplication" || chosen == "fives"){
+        else if (chosen == "multiplication" || chosen == "fives" || chosen == "tfi" ){
           var ans;
           if (sessionStorage.getItem("decim") == "2"){
             ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) * parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(10));
@@ -647,6 +867,12 @@
         $("#score1").text("Score: " + score);
         var rands = Math.floor(Math.random() * options1.length);
         chosen = options1[rands];
+        if (chosen == "fadd" || chosen == "sadd" || chosen == "madd" || chosen == "dadd"){
+          $("#endgame").css("top", "72%");
+        }
+        else {
+          $("#endgame").css("top", "67%");
+        }
         functions[options1[rands]]();
       }
       document.getElementById("answer").focus();
