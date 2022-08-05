@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-    <title>FastMafs</title>
+    <title>mlogm</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-49G49W5VG8"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -130,9 +130,24 @@
       if (sessionStorage.getItem("tfi") == "true"){
         options1.push("tfi");
       }
+      if ((sessionStorage.getItem("decim") == "1" || sessionStorage.getItem("decim") == "2" || sessionStorage.getItem("decim") == "3") && (sessionStorage.getItem("sadd") == "true" || sessionStorage.getItem("madd") == "true" || sessionStorage.getItem("fadd") == "true" || sessionStorage.getItem("dadd") == "true")){
+        options1.push("combined");
+      }
       var chosen = "";
 
       var functions = {
+        combined: function(){
+          var tw = Math.floor(Math.random() * 12);
+          var binary = Math.floor(Math.random() * 2);
+          if (tw == 0){ // 1 & sadd
+              if (binary == 0){ // frac first
+
+              }
+              if (binary == 1){ //decimal first
+
+              }
+          }
+        },
         dadd: function(){
           var first, second, third, fourth;
           first = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frla")) - parseInt(sessionStorage.getItem("frli")) + 1))  +  parseInt(sessionStorage.getItem("frli"));

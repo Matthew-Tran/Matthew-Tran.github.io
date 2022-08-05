@@ -134,20 +134,37 @@ div.denom {
 label, dd{
   font-size: 12px;
 }
-.o1, #answer{
+.o1, #durations, #dec{
+  font-family: 'Trebuchet MS', sans-serif;
+  background-color: black;
+  color: white;
+  border: 2px solid gray;
+  border-radius: 12px;
+  transition-duration: .5s;
+}
+ #answer{
   font-family: 'Trebuchet MS', sans-serif;
   border: 2px solid blue;
   border-radius: 12px;
   transition-duration: .5s;
 }
-.o1:hover, #answer:hover{
+.o1:hover,#durations:hover, #dec:hover{
+  border: 2px solid black;
+  box-shadow: 0 0 10px black;
+}
+#answer:hover{
   border: 2px solid blue;
   box-shadow: 0 0 10px blue;
 }
-.o1:focus, #answer:focus{
-  box-shadow: 0 0 20px blue;
+.o1:focus, #durations:focus, #dec:focus {
+  border: 2px solid gray;
   outline: none;
 }
+ #answer:focus{
+   box-shadow: 0 0 20px blue;
+   outline: none;
+ }
+
 .submitter {
   color: white;
   border-radius: 20px;
