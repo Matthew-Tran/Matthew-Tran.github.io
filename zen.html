@@ -85,22 +85,83 @@
 
       var functions = {
         addition: function(){
-          var first =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("addla")) - parseInt(sessionStorage.getItem("addli")) + 1))  +  parseInt(sessionStorage.getItem("addli"));
-          var second =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("addra")) - parseInt(sessionStorage.getItem("addri")) + 1))  +  parseInt(sessionStorage.getItem("addri"));
+          var first, second;
+          var rand1, rand2;
+          if (sessionStorage.getItem("decim") == "1"){
+            first =   Math.round(((Math.random() * (parseInt(sessionStorage.getItem("addla")) - parseInt(sessionStorage.getItem("addli"))))  +  parseInt(sessionStorage.getItem("addli"))) * 10) / 10;
+            second =  Math.round(((Math.random() * (parseInt(sessionStorage.getItem("addra")) - parseInt(sessionStorage.getItem("addri"))))  +  parseInt(sessionStorage.getItem("addri"))) * 10) / 10;
+          }
+          else if (sessionStorage.getItem("decim") == "2"){
+            rand1 = Math.floor(Math.random() * (3 - 1) + 1);
+            rand2 = Math.floor(Math.random() * (3 - 1) + 1);
+            first =   Math.round(((Math.random() * (parseInt(sessionStorage.getItem("addla")) - parseInt(sessionStorage.getItem("addli"))))  +  parseInt(sessionStorage.getItem("addli"))) * Math.pow(10,rand1)) / Math.pow(10,rand1);
+            second =  Math.round(((Math.random() * (parseInt(sessionStorage.getItem("addra")) - parseInt(sessionStorage.getItem("addri"))))  +  parseInt(sessionStorage.getItem("addri"))) * Math.pow(10,rand2)) / Math.pow(10,rand2);
+          }
+          else if (sessionStorage.getItem("decim") == "3"){
+            rand1 = Math.floor(Math.random() * (4 - 1) + 1);
+            rand2 = Math.floor(Math.random() * (4 - 1) + 1);
+            first =   Math.round(((Math.random() * (parseInt(sessionStorage.getItem("addla")) - parseInt(sessionStorage.getItem("addli"))))  +  parseInt(sessionStorage.getItem("addli"))) * Math.pow(10,rand1)) / Math.pow(10,rand1);
+            second =  Math.round(((Math.random() * (parseInt(sessionStorage.getItem("addra")) - parseInt(sessionStorage.getItem("addri"))))  +  parseInt(sessionStorage.getItem("addri"))) * Math.pow(10,rand2)) / Math.pow(10,rand2);
+          }
+          else {
+             first =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("addla")) - parseInt(sessionStorage.getItem("addli")) + 1))  +  parseInt(sessionStorage.getItem("addli"));
+             second =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("addra")) - parseInt(sessionStorage.getItem("addri")) + 1))  +  parseInt(sessionStorage.getItem("addri"));
+          }
           sessionStorage.setItem("first", String(first));
           sessionStorage.setItem("second", String(second));
           $("#prob").text(first + "+" + second + "=");
+          //alert(first+second);
         },
         subtraction: function(){
-          var first =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("subla")) - parseInt(sessionStorage.getItem("subli")) + 1))  +  parseInt(sessionStorage.getItem("subli"));
-          var second =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("subra")) - parseInt(sessionStorage.getItem("subri")) + 1))  +  parseInt(sessionStorage.getItem("subri"));
+          var first, second;
+          var rand1, rand2;
+          if (sessionStorage.getItem("decim") == "1"){
+            first =   Math.round(((Math.random() * (parseInt(sessionStorage.getItem("addla")) - parseInt(sessionStorage.getItem("addli"))))  +  parseInt(sessionStorage.getItem("addli"))) * 10) / 10;
+            second =  Math.round(((Math.random() * (parseInt(sessionStorage.getItem("addra")) - parseInt(sessionStorage.getItem("addri"))))  +  parseInt(sessionStorage.getItem("addri"))) * 10) / 10;
+          }
+          else if (sessionStorage.getItem("decim") == "2"){
+            rand1 = Math.floor(Math.random() * (3 - 1) + 1);
+            rand2 = Math.floor(Math.random() * (3 - 1) + 1);
+            first =   Math.round(((Math.random() * (parseInt(sessionStorage.getItem("addla")) - parseInt(sessionStorage.getItem("addli"))))  +  parseInt(sessionStorage.getItem("addli"))) * Math.pow(10,rand1)) / Math.pow(10,rand1);
+            second =  Math.round(((Math.random() * (parseInt(sessionStorage.getItem("addra")) - parseInt(sessionStorage.getItem("addri"))))  +  parseInt(sessionStorage.getItem("addri"))) * Math.pow(10,rand2)) / Math.pow(10,rand2);
+          }
+          else if (sessionStorage.getItem("decim") == "3"){
+            rand1 = Math.floor(Math.random() * (4 - 1) + 1);
+            rand2 = Math.floor(Math.random() * (4 - 1) + 1);
+            first =   Math.round(((Math.random() * (parseInt(sessionStorage.getItem("addla")) - parseInt(sessionStorage.getItem("addli"))))  +  parseInt(sessionStorage.getItem("addli"))) * Math.pow(10,rand1)) / Math.pow(10,rand1);
+            second =  Math.round(((Math.random() * (parseInt(sessionStorage.getItem("addra")) - parseInt(sessionStorage.getItem("addri"))))  +  parseInt(sessionStorage.getItem("addri"))) * Math.pow(10,rand2)) / Math.pow(10,rand2);
+          }
+          else {
+             first =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("addla")) - parseInt(sessionStorage.getItem("addli")) + 1))  +  parseInt(sessionStorage.getItem("addli"));
+             second =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("addra")) - parseInt(sessionStorage.getItem("addri")) + 1))  +  parseInt(sessionStorage.getItem("addri"));
+          }
           sessionStorage.setItem("first", String(first));
           sessionStorage.setItem("second", String(second));
           $("#prob").text(first + "-" + second + "=");
         },
         multiplication: function(){
-          var first =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("mulla")) - parseInt(sessionStorage.getItem("mulli")) + 1))  +  parseInt(sessionStorage.getItem("mulli"));
-          var second =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("mulra")) - parseInt(sessionStorage.getItem("mulri")) + 1))  +  parseInt(sessionStorage.getItem("mulri"));
+          var first, second;
+          var rand1, rand2;
+          if (sessionStorage.getItem("decim") == "1"){
+            first =   Math.round(((Math.random() * (parseInt(sessionStorage.getItem("mulla")) - parseInt(sessionStorage.getItem("mulli"))))  +  parseInt(sessionStorage.getItem("mulli"))) * 10) / 10;
+            second =  Math.round(((Math.random() * (parseInt(sessionStorage.getItem("mulra")) - parseInt(sessionStorage.getItem("mulri"))))  +  parseInt(sessionStorage.getItem("mulri"))) * 10) / 10;
+          }
+          else if (sessionStorage.getItem("decim") == "2"){
+            rand1 = Math.floor(Math.random() * (3 - 1) + 1);
+            rand2 = Math.floor(Math.random() * (3 - 1) + 1);
+            first =   Math.round(((Math.random() * (parseInt(sessionStorage.getItem("mulla")) - parseInt(sessionStorage.getItem("mulli"))))  +  parseInt(sessionStorage.getItem("mulli"))) * Math.pow(10,rand1)) / Math.pow(10,rand1);
+            second =  Math.round(((Math.random() * (parseInt(sessionStorage.getItem("mulra")) - parseInt(sessionStorage.getItem("mulri"))))  +  parseInt(sessionStorage.getItem("mulri"))) *  Math.pow(10,rand2)) / Math.pow(10,rand2);
+          }
+          else if (sessionStorage.getItem("decim") == "3"){
+            rand1 = Math.floor(Math.random() * (4 - 1) + 1);
+            rand2 = Math.floor(Math.random() * (4 - 1) + 1);
+            first =   Math.round(((Math.random() * (parseInt(sessionStorage.getItem("mulla")) - parseInt(sessionStorage.getItem("mulli"))))  +  parseInt(sessionStorage.getItem("mulli"))) * Math.pow(10,rand1)) / Math.pow(10,rand1);
+            second =  Math.round(((Math.random() * (parseInt(sessionStorage.getItem("mulra")) - parseInt(sessionStorage.getItem("mulri"))))  +  parseInt(sessionStorage.getItem("mulri"))) *  Math.pow(10,rand2)) / Math.pow(10,rand2);
+          }
+          else {
+             first =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("mulla")) - parseInt(sessionStorage.getItem("mulli")) + 1))  +  parseInt(sessionStorage.getItem("mulli"));
+             second =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("mulra")) - parseInt(sessionStorage.getItem("mulri")) + 1))  +  parseInt(sessionStorage.getItem("mulri"));
+          }
           sessionStorage.setItem("first", String(first));
           sessionStorage.setItem("second", String(second));
           $("#prob").text(first + "×" + second + "=");
@@ -109,18 +170,91 @@
           var first;
           var second;
           while (1 == 1){
-            first =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("divla")) - parseInt(sessionStorage.getItem("divli")) + 1))  +  parseInt(sessionStorage.getItem("divli"));
-            second =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("divra")) - parseInt(sessionStorage.getItem("divri")) + 1))  +  parseInt(sessionStorage.getItem("divri"));
-            if (Number.isInteger(first / second) || (Number.isInteger(second / first))){
-              if (second > first){
-                var temp = first;
-                first = second;
-                second = temp;
+            var first, second;
+            if (sessionStorage.getItem("decim") == "1"){
+              first =   Math.round(((Math.random() * (parseInt(sessionStorage.getItem("divla")) - parseInt(sessionStorage.getItem("divli"))))  +  parseInt(sessionStorage.getItem("divli"))) * 10) / 10;
+              second =  Math.round(((Math.random() * (parseInt(sessionStorage.getItem("divra")) - parseInt(sessionStorage.getItem("divri"))))  +  parseInt(sessionStorage.getItem("divri"))) * 10) / 10;
+              if (Number.isInteger(first * 10.0 / second * 10.0)){
+                sessionStorage.setItem("first", String(first));
+                sessionStorage.setItem("second", String(second));
+                $("#prob").text(first + "÷" + second + "=");
+                break;
               }
-              sessionStorage.setItem("first", String(first));
-              sessionStorage.setItem("second", String(second));
-              $("#prob").text(first + "÷" + second + "=");
-              break;
+              if (Number.isInteger(second * 10.0 / first * 10.0)){
+                if (second > first){
+                  var temp = first;
+                  first = second;
+                  second = temp;
+                  sessionStorage.setItem("first", String(first));
+                  sessionStorage.setItem("second", String(second));
+                  $("#prob").text(first + "÷" + second + "=");
+                  break;
+                }
+              }
+            }
+            else if (sessionStorage.getItem("decim") == "2"){
+              first =   Math.round(((Math.random() * (parseInt(sessionStorage.getItem("divla")) - parseInt(sessionStorage.getItem("divli"))))  +  parseInt(sessionStorage.getItem("divli"))) * 100) / 100;
+              second =  Math.round(((Math.random() * (parseInt(sessionStorage.getItem("divra")) - parseInt(sessionStorage.getItem("divri"))))  +  parseInt(sessionStorage.getItem("divri"))) * 100) / 100;
+              if (Number.isInteger(first * 100.0 / second * 100.0)){
+                sessionStorage.setItem("first", String(first));
+                sessionStorage.setItem("second", String(second));
+                $("#prob").text(first + "÷" + second + "=");
+                break;
+              }
+              if (Number.isInteger(second * 100.0 / first * 100.0)){
+                if (second > first){
+                  var temp = first;
+                  first = second;
+                  second = temp;
+                  sessionStorage.setItem("first", String(first));
+                  sessionStorage.setItem("second", String(second));
+                  $("#prob").text(first + "÷" + second + "=");
+                  break;
+                }
+
+              }
+            }
+            else if (sessionStorage.getItem("decim") == "3"){
+              first =   Math.round(((Math.random() * (parseInt(sessionStorage.getItem("divla")) - parseInt(sessionStorage.getItem("divli"))))  +  parseInt(sessionStorage.getItem("divli"))) * 1000) / 1000;
+              second =  Math.round(((Math.random() * (parseInt(sessionStorage.getItem("divra")) - parseInt(sessionStorage.getItem("divri"))))  +  parseInt(sessionStorage.getItem("divri"))) * 1000) / 1000;
+              if (Number.isInteger(first * 1000.0 / second * 1000.0)){
+                sessionStorage.setItem("first", String(first));
+                sessionStorage.setItem("second", String(second));
+                $("#prob").text(first + "÷" + second + "=");
+                break;
+              }
+              if (Number.isInteger(second * 1000.0 / first * 1000.0)){
+                if (second > first){
+                  var temp = first;
+                  first = second;
+                  second = temp;
+                  sessionStorage.setItem("first", String(first));
+                  sessionStorage.setItem("second", String(second));
+                  $("#prob").text(first + "÷" + second + "=");
+                  break;
+                }
+              }
+            }
+            else {
+               first =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("divla")) - parseInt(sessionStorage.getItem("divli")) + 1))  +  parseInt(sessionStorage.getItem("divli"));
+               second =  Math.floor(Math.random() * (parseInt(sessionStorage.getItem("divra")) - parseInt(sessionStorage.getItem("divri")) + 1))  +  parseInt(sessionStorage.getItem("divri"));
+               if (Number.isInteger(first  / second )){
+                 sessionStorage.setItem("first", String(first));
+                 sessionStorage.setItem("second", String(second));
+                 $("#prob").text(first + "÷" + second + "=");
+                 break;
+               }
+               if (Number.isInteger(second  / first )){
+                 if (second > first){
+                   var temp = first;
+                   first = second;
+                   second = temp;
+                   sessionStorage.setItem("first", String(first));
+                   sessionStorage.setItem("second", String(second));
+                   $("#prob").text(first + "÷" + second + "=");
+                   break;
+                 }
+               }
             }
           }
         },
@@ -350,29 +484,83 @@
       };
       function myFunction() {
         if (chosen == "addition"){
-          if ($("#answer").val() == (parseInt(sessionStorage.getItem("first")) + parseInt(sessionStorage.getItem("second")))){
-            score++;
+        //  alert(parseDouble(sessionStorage.getItem("first")) + parseDouble(sessionStorage.getItem("second")));
+        var ans;
+        if (sessionStorage.getItem("decim") == "2"){
+          ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) + parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(2));
+        }
+        else if (sessionStorage.getItem("decim") == "1"){
+          ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) + parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(1));
+        }
+        else if (sessionStorage.getItem("decim") == "3"){
+          ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) + parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(3));
+        }
+        else {
+          ans = (parseInt(sessionStorage.getItem("first")) + parseInt(sessionStorage.getItem("second")));
+        }
+          if ($("#answer").val() == ans){
 
+            score++;
             $("#answer").val("");
             chooser();
           }
         }
         else if (chosen == "subtraction"){
-          if ($("#answer").val() == (parseInt(sessionStorage.getItem("first")) - parseInt(sessionStorage.getItem("second")))){
+          var ans;
+          if (sessionStorage.getItem("decim") == "2"){
+            ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) - parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(2));
+          }
+          else if (sessionStorage.getItem("decim") == "1"){
+            ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) - parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(1));
+          }
+          else if (sessionStorage.getItem("decim") == "3"){
+            ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) - parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(3));
+          }
+          else {
+            ans = (parseInt(sessionStorage.getItem("first")) - parseInt(sessionStorage.getItem("second")));
+          }
+          if ($("#answer").val() == ans){
             score++;
             $("#answer").val("");
             chooser();
           }
         }
         else if (chosen == "multiplication" || chosen == "fives"){
-          if ($("#answer").val() == (parseInt(sessionStorage.getItem("first")) * parseInt(sessionStorage.getItem("second")))){
+          var ans;
+          if (sessionStorage.getItem("decim") == "2"){
+            ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) * parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(10));
+          }
+          else if (sessionStorage.getItem("decim") == "1"){
+            ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) * parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(10));
+          }
+          else if (sessionStorage.getItem("decim") == "3"){
+            ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) * parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(10));
+          }
+          else {
+            ans = (parseInt(sessionStorage.getItem("first")) * parseInt(sessionStorage.getItem("second")));
+          }
+
+          if ($("#answer").val() == ans){
             score++;
             $("#answer").val("");
             chooser();
           }
         }
         else if (chosen == "division"){
-          if ($("#answer").val() == (parseInt(sessionStorage.getItem("first")) / parseInt(sessionStorage.getItem("second")))){
+          var ans;
+          if (sessionStorage.getItem("decim") == "2"){
+            ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) / parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(10));
+          }
+          else if (sessionStorage.getItem("decim") == "1"){
+            ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) / parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(10));
+          }
+          else if (sessionStorage.getItem("decim") == "3"){
+            ans = parseFloat((parseFloat(((parseFloat(sessionStorage.getItem("first")) / parseFloat(sessionStorage.getItem("second")))).toString())).toFixed(10));
+          }
+          else {
+            ans = (parseInt(sessionStorage.getItem("first")) / parseInt(sessionStorage.getItem("second")));
+          }
+          if ($("#answer").val() == ans){
             score++;
             $("#answer").val("");
             chooser();

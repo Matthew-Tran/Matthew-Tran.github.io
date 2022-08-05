@@ -75,6 +75,12 @@
           </dt> -->
           <dt>
             <label>
+              <input name="frac" type="checkbox" id="frac1"> Fractions - (<input name="fadd" type="checkbox" id="fadd"> + ) (<input name="sadd" type="checkbox" id="sadd"> - ) (<input name="madd" type="checkbox" id="madd"> × ) (<input name="dadd" type="checkbox" id="dadd"> ÷ )
+            </label>
+          </dt>
+          <dd>Range: Numerator (<input type="text" name="frac_left_min" class="o1"  id="frac_left_min" value="2" size="5"> to <input type="text" name="frac_left_max" class="o1"  id="frac_left_max" value="50" size="5">) / Denominator (<input type="text" name="frac_right_min" class="o1"  id="frac_right_min" value="2" size="5"> to <input type="text" name="frac_right_max" class="o1"  id="frac_right_max" value="50" size="5">)</dd>
+          <dt>
+            <label>
               <input name='arith' type='checkbox' id="squares">
                 Squares - Multiplying a number by itself.
             </label>
@@ -256,6 +262,11 @@
         sessionStorage.setItem("divri", $("#div_right_min").val());
         sessionStorage.setItem("divra", $("#div_right_max").val());
 
+        sessionStorage.setItem("frli", $("#frac_left_min").val());
+        sessionStorage.setItem("frla", $("#frac_left_max").val());
+        sessionStorage.setItem("frri", $("#frac_right_min").val());
+        sessionStorage.setItem("frra", $("#frac_right_max").val());
+
         sessionStorage.setItem("sqrli", $("#squares_left_min").val());
         sessionStorage.setItem("sqrla", $("#squares_left_max").val());
 
@@ -385,6 +396,34 @@
         }
         else {
           sessionStorage.setItem("gcd", "false");
+        }
+        if ($("#fadd").is(":checked")){
+          sessionStorage.setItem("fadd", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("fadd", "false");
+        }
+        if ($("#sadd").is(":checked")){
+          sessionStorage.setItem("sadd", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("sadd", "false");
+        }
+        if ($("#madd").is(":checked")){
+          sessionStorage.setItem("madd", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("madd", "false");
+        }
+        if ($("#dadd").is(":checked")){
+          sessionStorage.setItem("dadd", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("dadd", "false");
         }
         if (sessionStorage.getItem("selected") == "false"){
           event.preventDefault();
@@ -413,6 +452,11 @@
         sessionStorage.setItem("divri", $("#div_right_min").val());
         sessionStorage.setItem("divra", $("#div_right_max").val());
 
+        sessionStorage.setItem("fli", $("#frac_left_min").val());
+        sessionStorage.setItem("fla", $("#frac_left_max").val());
+        sessionStorage.setItem("fri", $("#frac_right_min").val());
+        sessionStorage.setItem("fra", $("#frac_right_max").val());
+
         sessionStorage.setItem("sqrli", $("#squares_left_min").val());
         sessionStorage.setItem("sqrla", $("#squares_left_max").val());
 
@@ -542,6 +586,34 @@
         }
         else {
           sessionStorage.setItem("gcd", "false");
+        }
+        if ($("#fadd").is(":checked")){
+          sessionStorage.setItem("fadd", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("fadd", "false");
+        }
+        if ($("#sadd").is(":checked")){
+          sessionStorage.setItem("sadd", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("sadd", "false");
+        }
+        if ($("#madd").is(":checked")){
+          sessionStorage.setItem("madd", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("madd", "false");
+        }
+        if ($("#dadd").is(":checked")){
+          sessionStorage.setItem("dadd", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("dadd", "false");
         }
         if (sessionStorage.getItem("selected") == "false"){
           event.preventDefault();

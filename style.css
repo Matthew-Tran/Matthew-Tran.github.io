@@ -7,7 +7,23 @@ body {
   font-family: 'Trebuchet MS', sans-serif;
   overflow-x: hidden;
 }
- 
+div.numer {
+ border-bottom:1px solid;
+ text-align:center;
+ font-size: 0.8em;
+}
+
+div.denom {
+ font-size: 0.8em;
+ border-top: 1px solid;
+ text-align: center;
+}
+#arithfrac{
+  font-size: 150%;
+}
+#fraction, #operation{
+ display: inline-block;
+}
 #ad1, #ad4  {
   height: 600px;
   width: 120px;
