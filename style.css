@@ -328,12 +328,12 @@ label, dd{
 }
 #scoreboard #timer{
   position: absolute;
-  left: 12%;
+  left: 10%;
 }
 #scoreboard #score{
   position: absolute;
 
-  left: 65%;
+  right: 10%;
 }
 #endgame{
   position: absolute;
