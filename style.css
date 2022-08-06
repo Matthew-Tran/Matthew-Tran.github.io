@@ -326,6 +326,10 @@ label, dd{
     border-color: #2bb32b;
   }
 }
+#score1{
+  position:absolute;
+  top: 0%;
+}
 #scoreboard #timer{
   position: absolute;
   left: 10%;
