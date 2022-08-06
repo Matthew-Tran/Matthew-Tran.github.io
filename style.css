@@ -313,7 +313,7 @@ label, dd{
   border-radius: 20px 20px 0px 0px;
   color: white;
   min-width: 25%;
-  min-height: 30%;
+  min-height: 60%;
   animation: bglow2 2s ease-in-out infinite alternate;
   z-index: 1;
 }
@@ -329,10 +329,11 @@ label, dd{
 #scoreboard #timer{
   position: absolute;
   left: 10%;
+  top: 0%;
 }
 #scoreboard #score{
   position: absolute;
-
+  top: 0%;
   right: 10%;
 }
 #endgame{
