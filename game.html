@@ -133,9 +133,18 @@
       if ((sessionStorage.getItem("decim") == "1" || sessionStorage.getItem("decim") == "2" || sessionStorage.getItem("decim") == "3") && (sessionStorage.getItem("sadd") == "true" || sessionStorage.getItem("madd") == "true" || sessionStorage.getItem("fadd") == "true" || sessionStorage.getItem("dadd") == "true")){
         options1.push("combined");
       }
+      if (sessionStorage.getItem("squarer") == "true"){
+        options1.push("squarer");
+      }
       var chosen = "";
 
       var functions = {
+        squarer: function(){
+          var num = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("sqrla")) - parseInt(sessionStorage.getItem("sqrli")) + 1))  +  parseInt(sessionStorage.getItem("sqrli"));
+          var power = Math.pow(num, 2);
+          $("#prob").html("<span style='white-space: nowrap; font-size:220%'><span style='font-size:100%'>&radic;</span><span style='text-decoration:overline; text-decoration-thickness: 13.7%; font-size: 67.16%'>"+ power +"</span><span>=</span></span>");
+          sessionStorage.setItem("ans", String(num));
+        },
         combined: function(){
           var tw = Math.floor(Math.random() * 12);
           var binary = Math.floor(Math.random() * 2);
@@ -611,7 +620,14 @@
       };
 
       function myFunction() {
-        if (chosen == "fadd"){
+        if (chosen == "squarer"){
+          if ($("#answer").val() ==  (sessionStorage.getItem("ans"))){
+            score++;
+            $("#answer").val("");
+            chooser();
+          }
+        }
+        else if (chosen == "fadd"){
           function gcd_two_numbers(x, y) {
             if ((typeof x !== 'number') || (typeof y !== 'number'))
             return false;

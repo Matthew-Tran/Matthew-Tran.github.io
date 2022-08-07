@@ -85,7 +85,13 @@
                 Squares - Multiplying a number by itself.
             </label>
           </dt>
-          <dd>Range: (<input type="text" name="squares_left_min" class="o1"  id="squares_left_min" value="2" size="5"> to <input type="text" name="squares_left_max" class="o1"  id="squares_left_max" value="50" size="5">)</dd>
+          <dd>Range: (<input type="text" name="squares_left_min" class="o1"  id="squares_left_min" value="2" size="5"> to <input type="text" name="squares_left_max" class="o1"  id="squares_left_max" value="100" size="5">)</dd>
+          <dt>
+            <label>
+              <input name='arith' type='checkbox' id="squarer">
+                Square Roots - Opposite of Squares
+            </label>
+          </dt>
           <dt>
             <label>
               <input name='arith' type='checkbox' id="cubes">
@@ -429,9 +435,20 @@
         else {
           sessionStorage.setItem("dadd", "false");
         }
+        if ($("#squarer").is(":checked")){
+          sessionStorage.setItem("squarer", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("squarer", "false");
+        }
         if (sessionStorage.getItem("selected") == "false"){
           event.preventDefault();
           alert("You didn't select anything.");
+        }
+        if ((parseInt(sessionStorage.getItem("sqrli")) < 0 && sessionStorage.getItem("squares") == "false") || (parseInt(sessionStorage.getItem("sqrla")) < 0 && sessionStorage.getItem("squares") == "false")){
+          event.preventDefault();
+          alert("Negative numbers are not allowed for square roots.");
         }
       });
       $(".zen").click(function(){
@@ -619,6 +636,13 @@
         }
         else {
           sessionStorage.setItem("dadd", "false");
+        }
+        if ($("#squarer").is(":checked")){
+          sessionStorage.setItem("squarer", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("squarer", "false");
         }
         if (sessionStorage.getItem("selected") == "false"){
           event.preventDefault();
