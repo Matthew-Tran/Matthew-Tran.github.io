@@ -89,7 +89,7 @@
           <dt>
             <label>
               <input name='arith' type='checkbox' id="squarer">
-                Square Roots - Opposite of Squares
+                Square Roots - Opposite of Squaring.
             </label>
           </dt>
           <dt>
@@ -99,6 +99,12 @@
             </label>
           </dt>
           <dd>Range: (<input type="text" name="cubes_left_min" class="o1"  id="cubes_left_min" value="2" size="5"> to <input type="text" name="cubes_left_max" class="o1"  id="cubes_left_max" value="50" size="5">)</dd>
+          <dt>
+            <label>
+              <input name='arith' type='checkbox' id="cuber">
+              Cube Roots - Opposite of Cubing.
+            </label>
+          </dt>
           <dt>
             <label>
               <input name='arith' type='checkbox' id="factorials">
@@ -442,6 +448,13 @@
         else {
           sessionStorage.setItem("squarer", "false");
         }
+        if ($("#cuber").is(":checked")){
+          sessionStorage.setItem("cuber", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("cuber", "false");
+        }
         if (sessionStorage.getItem("selected") == "false"){
           event.preventDefault();
           alert("You didn't select anything.");
@@ -644,9 +657,20 @@
         else {
           sessionStorage.setItem("squarer", "false");
         }
+        if ($("#cuber").is(":checked")){
+          sessionStorage.setItem("cuber", "true");
+          sessionStorage.setItem("selected", "true");
+        }
+        else {
+          sessionStorage.setItem("cuber", "false");
+        }
         if (sessionStorage.getItem("selected") == "false"){
           event.preventDefault();
           alert("You didn't select anything.");
+        }
+        if ((parseInt(sessionStorage.getItem("sqrli")) < 0 && sessionStorage.getItem("squares") == "false") || (parseInt(sessionStorage.getItem("sqrla")) < 0 && sessionStorage.getItem("squares") == "false")){
+          event.preventDefault();
+          alert("Negative numbers are not allowed for square roots.");
         }
       });
       $("#ltomt").click(function(){

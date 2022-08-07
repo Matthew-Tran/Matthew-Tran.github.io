@@ -96,9 +96,27 @@
       if (sessionStorage.getItem("tfi") == "true"){
         options1.push("tfi");
       }
+      if (sessionStorage.getItem("squarer") == "true"){
+        options1.push("squarer");
+      }
+      if (sessionStorage.getItem("cuber") == "true"){
+        options1.push("cuber");
+      }
       var chosen = "";
 
       var functions = {
+        cuber: function(){
+          var first = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("cubea")) - parseInt(sessionStorage.getItem("cubei")) + 1))  +  parseInt(sessionStorage.getItem("cubei"));
+          var power = Math.pow(first, 3);
+          $("#prob").html("<span style='white-space: nowrap; font-size:200%'><sup style='font-size:50%'>3</sup><span style='font-size:100%'>&radic;</span><span style='text-decoration:overline; text-decoration-thickness: 13.7%; font-size: 67.16%'>"+ power +"</span><span>=</span></span>");
+          sessionStorage.setItem("ans", String(first));
+        },
+        squarer: function(){
+          var num = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("sqrla")) - parseInt(sessionStorage.getItem("sqrli")) + 1))  +  parseInt(sessionStorage.getItem("sqrli"));
+          var power = Math.pow(num, 2);
+          $("#prob").html("<span style='white-space: nowrap; font-size:220%'><span style='font-size:100%'>&radic;</span><span style='text-decoration:overline; text-decoration-thickness: 13.7%; font-size: 67.16%'>"+ power +"</span><span>=</span></span>");
+          sessionStorage.setItem("ans", String(num));
+        },
         dadd: function(){
           var first, second, third, fourth;
           first = Math.floor(Math.random() * (parseInt(sessionStorage.getItem("frla")) - parseInt(sessionStorage.getItem("frli")) + 1))  +  parseInt(sessionStorage.getItem("frli"));
@@ -563,7 +581,21 @@
       };
 
       function myFunction() {
-        if (chosen == "fadd"){
+        if (chosen == "cuber"){
+          if ($("#answer").val() ==  (sessionStorage.getItem("ans"))){
+            score++;
+            $("#answer").val("");
+            chooser();
+          }
+        }
+        else if (chosen == "squarer"){
+          if ($("#answer").val() ==  (sessionStorage.getItem("ans"))){
+            score++;
+            $("#answer").val("");
+            chooser();
+          }
+        }
+        else if (chosen == "fadd"){
           function gcd_two_numbers(x, y) {
             if ((typeof x !== 'number') || (typeof y !== 'number'))
             return false;
@@ -867,7 +899,7 @@
         $("#score1").text("Score: " + score);
         var rands = Math.floor(Math.random() * options1.length);
         chosen = options1[rands];
-        
+
         functions[options1[rands]]();
       }
       document.getElementById("answer").focus();
